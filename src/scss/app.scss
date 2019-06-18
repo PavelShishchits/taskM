@@ -1,4 +1,11 @@
+//@import "../components/core/tabs/style";
+@import "utils/variables";
+
 body {
   margin: 0;
   padding: 0;
+
+  @media (max-width: $screen-lg-max) {
+    background: red;
+  }
 }
