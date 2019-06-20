@@ -1,5 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 const sass = require('./webpack/sass');
 const sassbuild = require('./webpack/sass-build');
 const pug = require('./webpack/pug');
@@ -12,30 +14,39 @@ const PATHS = {
   dist: path.join(__dirname, 'dist'),
 };
 
-const commonConfig = merge([
-  {
-    entry: {
-      app: path.join(PATHS.src, 'index.js')
+const commonConfig = (argv) => {
+  const {mode} = argv;
+  return merge([
+    {
+      entry: {
+        app: path.join(PATHS.src, 'index.js')
+      },
+      output: {
+        filename: mode === 'production' ? './js/[name].min.js' : './js/[name].js',
+        path: PATHS.dist
+      }
     },
-    output: {
-      filename: '[name].js',
-      path: PATHS.dist
-    }
-  },
-  pug(),
-  images(),
-  babel()
-]);
+    pug(),
+    images(),
+    babel()
+  ])
+};
 
 module.exports = ((env, argv) => {
-  if (argv.mode === 'production') {
+  const {mode} = argv;
+  if (mode === 'production') {
     return merge([
-      commonConfig,
+      commonConfig(argv),
+      {
+        plugins: [
+          new CleanWebpackPlugin()
+        ]
+      },
       sassbuild()
     ])
-  } else if (argv.mode === 'development') {
+  } else if (mode === 'development') {
     return merge([
-      commonConfig,
+      commonConfig(argv),
       devserver(),
       sass(),
       {
