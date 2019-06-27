@@ -1,11 +1,15 @@
-//@import "../components/core/tabs/style";
-@import "utils/variables";
+// =====================================
+// Main
+// =====================================
+@import "main/variables";
+@import "main/fonts";
 
 body {
   margin: 0;
   padding: 0;
+  @include font-family-regular;
 
   @media (max-width: $screen-lg-max) {
-    background: red;
+    background: #e5e5e5;
   }
 }

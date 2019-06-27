@@ -4,8 +4,8 @@ module.exports = () => {
     return {
         devServer: {
             contentBase: path.resolve(__dirname, '../dist'),
-            open: true,
-            port: 3000,
-        },
+            open: false, // toDo set to true on config finish
+            port: 3000
+        }
     };
 };

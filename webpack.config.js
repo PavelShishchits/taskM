@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const sass = require('./webpack/sass');
 const sassbuild = require('./webpack/sass-build');
 const pug = require('./webpack/pug');
+const fonts = require('./webpack/fonts');
 const images = require('./webpack/images');
 const babel = require('./webpack/babel');
 const devserver = require('./webpack/devserver');
@@ -27,6 +28,7 @@ const commonConfig = (argv) => {
       }
     },
     pug(),
+    fonts(),
     images(),
     babel()
   ])
