@@ -1,0 +1,38 @@
+@mixin hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin max-height($fs: 16, $lh: 20, $quant: 2) {
+  font-size: $fs + px;
+  line-height: ($lh/$fs);
+  max-height: (($lh/$fs) * $quant + em);
+  overflow: hidden;
+  @if ($quant == 1) {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+//@mixin placeholder($color: $input-placeholder-color) {
+//  // For Mozilla 15-17 placeholder color
+//  &:-moz-placeholder {
+//    color: $color;
+//    opacity: 1;
+//  }
+//  // Firefox
+//  &::-moz-placeholder {
+//    color: $color;
+//    opacity: 1; // See https://github.com/twbs/bootstrap/pull/11526
+//  }
+//  // Internet Explorer 10+
+//  &:-ms-input-placeholder {
+//    color: $color;
+//  }
+//  // Safari and Chrome
+//  &::-webkit-input-placeholder {
+//    color: $color;
+//  }
+//}
