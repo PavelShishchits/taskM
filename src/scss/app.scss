@@ -1,15 +1,14 @@
 // =====================================
 // Main
 // =====================================
-@import "main/variables";
 @import "main/fonts";
+@import "main/variables";
 
-body {
-  margin: 0;
-  padding: 0;
-  @include font-family-regular;
-
-  @media (max-width: $screen-lg-max) {
-    background: #e5e5e5;
-  }
-}
+// =====================================
+// Base
+// =====================================
+@import "base/normalize/style";
+@import "base/grid/style";
+@import "base/layout/style";
+@import "base/spacing/style";
+@import "base/display/style";

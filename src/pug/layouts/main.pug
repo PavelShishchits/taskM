@@ -1,0 +1,49 @@
+block props
+  -
+    let PROPS = {// Global variables
+      bodyClass: '',// body className
+      pageTitle: 'Page',// Page title
+      layout: 'aside',// layout type: wide, aside
+      isMain: false,// is the main page
+      DIR: '',// The path relative to the folder src/pages
+    };
+block pagePROPS
+doctype html
+html(lang='en')
+  head
+    include ../meta/head
+    title #{PROPS.pageTitle}
+  body.en.no-js(class=PROPS.bodyClass + (PROPS.isMain === true ? ' main' : ' inner'))
+    .site-wrap
+      .site-bg
+        header.header
+          block header
+            //include ../../components/header/header/index
+        .main-wrap
+          .container
+            if (PROPS.layout !== 'simple')
+              block breadcrumbs
+                if (PROPS.isMain !== true)
+                  //include ../../components/base/breadcrumb/index
+              block title
+                h1#title H1 Page title, long-long page title
+              if (PROPS.layout === 'aside')
+                .row
+                  aside.main-sidebar.col-lg-3.col-12.d-print-none
+                    block aside
+                      //include ../../components/aside/menu-aside-3/index
+                  main.main-content.col-lg-9.col-12
+                    block content
+              else
+                main.main-content
+                  block content
+            else
+              block content
+        footer.footer.d-print-none
+          block footer
+            //include ../../components/footer/footer/index
+      block extra-modules
+        //include ../../components/extra/pm/index
+        //include ../../components/extra/scroll-to-top/index
+      block popup
+        //include ../../components/modals/quest-modal/index

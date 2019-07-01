@@ -1,5 +1,4 @@
-const greatings = 'hello';
-
-console.log(greatings);
-
+import {psUtils} from './modules/utils';
 import '../components/core/tabs/script';
+
+console.log(psUtils);

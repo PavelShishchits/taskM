@@ -1,0 +1,72 @@
+html {
+  min-height: 100vh;
+}
+
+body,
+.site-wrap,
+.site-bg {
+  min-height: inherit;
+}
+
+html body {
+  background-color: $body-bg-outer-color;
+}
+
+.site-bg {
+  min-width: $site-min-width;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @media (max-width: $grid-breakpoint-max) {
+    overflow-x: hidden;
+    height: 100%; // iPhone bug with overflow
+  }
+
+  .site-wrap & {
+    max-width: $site-max-width;
+    background: $body-bg-color;
+    margin: 0 auto;
+  }
+}
+
+.site-wrap {
+  overflow-x: hidden;
+  min-width: $site-min-width;
+
+  .modal-open & {
+    overflow: initial;
+  }
+}
+
+.main-wrap {
+  flex: 1 0 auto;
+  padding-top: 70px;
+
+  @media (max-width: $screen-sm-max) {
+    padding-top: 58px;
+  }
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.main-content {
+  padding-bottom: 44px;
+
+  @media (max-width: $screen-sm-max) {
+    padding-bottom:  25px;
+  }
+
+  @media (min-width: $grid-breakpoint-min) {
+
+    .main-sidebar + & {
+      padding-left: 30px;
+    }
+  }
+
+  //.main & {
+  //  padding-bottom: 20px;
+  //}
+}

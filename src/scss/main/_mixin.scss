@@ -16,6 +16,18 @@
   }
 }
 
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
 //@mixin placeholder($color: $input-placeholder-color) {
 //  // For Mozilla 15-17 placeholder color
 //  &:-moz-placeholder {
