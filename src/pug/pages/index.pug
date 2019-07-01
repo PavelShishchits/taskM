@@ -1,6 +1,9 @@
 extends ../layouts/main
-
+block pagePROPS
+  - PROPS.pageTitle = 'Main page';
+  - PROPS.layout = 'wide';
+  - PROPS.isMain = true;
 block content
-    div
-        a.link(href='#') index
-    include ../../components/core/tabs/index
+  div
+    a.link(href='#') index
+  include ../../components/core/tabs/index

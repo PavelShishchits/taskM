@@ -18,7 +18,7 @@ html(lang='en')
       .site-bg
         header.header
           block header
-            //include ../../components/header/header/index
+            include ../../components/header/header/index
         .main-wrap
           .container
             if (PROPS.layout !== 'simple')
@@ -41,7 +41,7 @@ html(lang='en')
               block content
         footer.footer.d-print-none
           block footer
-            //include ../../components/footer/footer/index
+            include ../../components/footer/footer/index
       block extra-modules
         //include ../../components/extra/pm/index
         //include ../../components/extra/scroll-to-top/index

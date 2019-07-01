@@ -1,0 +1,11 @@
+$_footer-bg:                              #f7f8f3;
+
+.footer {
+  background: $_footer-bg;
+
+  &__bottom {
+    margin-top: 20px;
+    padding: 25px 0 15px;
+    border-top: 1px solid rgba($text-footer-color, .5);
+  }
+}
