@@ -3,7 +3,6 @@ const merge = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const sass = require('./webpack/sass');
-const sassbuild = require('./webpack/sass-build');
 const pug = require('./webpack/pug');
 const favicon = require('./webpack/favicon');
 const fonts = require('./webpack/fonts');
@@ -31,7 +30,8 @@ const commonConfig = (argv) => {
     pug(),
     fonts(),
     images(),
-    babel()
+    babel(),
+    sass(argv)
   ])
 };
 
@@ -45,14 +45,12 @@ module.exports = ((env, argv) => {
           new CleanWebpackPlugin()
         ]
       },
-      sassbuild(),
       favicon()
     ])
   } else if (mode === 'development') {
     return merge([
       commonConfig(argv),
       devserver(),
-      sass(),
       {
         devtool: 'eval-sourcemap',
       }
