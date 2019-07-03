@@ -96,7 +96,7 @@ address {
 }
 
 dt {
-  @include font-family-bold;
+  font-family: $font-b;
 }
 
 dd {

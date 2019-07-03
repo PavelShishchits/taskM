@@ -1,3 +1,4 @@
+const sass = require('sass');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserJSPlugin = require('terser-webpack-plugin');
@@ -6,6 +7,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports = (argv) => {
     const {mode} = argv;
     const isProduction = mode === 'production';
+
     let config = {
         module: {
             rules: [
@@ -28,7 +30,13 @@ module.exports = (argv) => {
                                 ]
                             }
                         },
-                        'sass-loader'
+                        {
+                            loader: 'sass-loader',
+                            options: {
+                                implementation: sass,
+                                data: '@import "./src/scss/globUtils/style";'
+                            }
+                        }
                     ]
                 }
             ]

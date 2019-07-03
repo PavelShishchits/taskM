@@ -1,12 +1,17 @@
 // =====================================
-// Main
+// main
 // =====================================
+
 @import "main/fonts";
-@import "main/variables";
+
+// =====================================
+// globUtils imported via webpack config
+// =====================================
 
 // =====================================
 // Base
 // =====================================
+
 @import "base/normalize/style";
 @import "base/grid/style";
 @import "base/layout/style";
@@ -14,6 +19,13 @@
 @import "base/display/style";
 
 // =====================================
+// Base
+// =====================================
+
+@import "helpers/style";
+
+// =====================================
 // Components
 // =====================================
+
 @import "../components/style";
