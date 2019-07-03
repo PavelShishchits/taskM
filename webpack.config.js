@@ -62,6 +62,5 @@ module.exports = ((env, argv) => {
 // toDo include jquery
 // toDo svg icon generator
 // toDo png icon generator
-// toDo post css merge queries
-// toDo post css inline svg
 // toDo media queries in js
+// toDo image optimization
