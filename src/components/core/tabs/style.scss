@@ -8,4 +8,11 @@
   @media (max-width: $screen-lg-max) {
     background: yellow;
   }
+
+  .tabs__inner {
+
+    @media (max-width: $screen-lg-max) {
+      background: red;
+    }
+  }
 }

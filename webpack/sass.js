@@ -1,5 +1,6 @@
 const sass = require('sass');
 const autoprefixer = require('autoprefixer');
+const mqpacker = require('css-mqpacker');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -26,7 +27,8 @@ module.exports = (argv) => {
                             options: {
                                 ident: 'postcss',
                                 plugins: [
-                                    autoprefixer()
+                                    autoprefixer(),
+                                    mqpacker()
                                 ]
                             }
                         },

@@ -39,12 +39,12 @@ module.exports = ((env, argv) => {
   const {mode} = argv;
   if (mode === 'production') {
     return merge([
-      commonConfig(argv),
       {
         plugins: [
           new CleanWebpackPlugin()
         ]
       },
+      commonConfig(argv),
       favicon()
     ])
   } else if (mode === 'development') {
@@ -64,3 +64,4 @@ module.exports = ((env, argv) => {
 // toDo png icon generator
 // toDo post css merge queries
 // toDo post css inline svg
+// toDo media queries in js
