@@ -9,6 +9,7 @@ const fonts = require('./webpack/fonts');
 const images = require('./webpack/images');
 const babel = require('./webpack/babel');
 const devserver = require('./webpack/devserver');
+const svgSprite = require('./webpack/svgSprite');
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
@@ -31,7 +32,8 @@ const commonConfig = (argv) => {
     fonts(),
     images(),
     babel(),
-    sass(argv)
+    sass(argv),
+    svgSprite()
   ])
 };
 

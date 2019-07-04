@@ -3,17 +3,15 @@
   padding: 0;
   min-height: 100px;
   min-width: 100px;
-  background-color: green;
-
 
   @media (max-width: $screen-lg-max) {
-    background: yellow;
+    //background: yellow;
   }
 
   &__inner {
 
     @media (max-width: $screen-lg-max) {
-      background: #e5e5e5;
+      //background: #e5e5e5;
     }
   }
 
@@ -22,5 +20,12 @@
     width: 21px;
     height: 21px;
     background-image: svg-load('svgCss/close.svg', fill=#000, stroke=#e5e5e5);
+  }
+
+  .close-ic {
+    fill: #3a71c0;
+    stroke: #3a71c0;
+    height: 21px;
+    width: 21px;
   }
 }
