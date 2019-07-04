@@ -1,7 +1,11 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="utf-8")
-    body
-        div
-            a.link(href='#') blog
+extends ../layouts/main
+block pagePROPS
+    - PROPS.pageTitle = 'Blog page';
+    - PROPS.layout = 'wide';
+block content
+    div
+        a.link(href='#') blog
+    //include ../../components/core/tabs/index
+    svg(class='close-ic')
+        use(xlink:href="#close")
+

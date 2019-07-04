@@ -17,15 +17,27 @@
 
   &__icon {
     display: inline-block;
-    width: 21px;
-    height: 21px;
-    background-image: svg-load('svgCss/close.svg', fill=#000, stroke=#e5e5e5);
-  }
+    width: 30px;
+    height: 30px;
+    background-image: svg-load('svgCss/close.svg', stroke=#000);
+    background-size: cover;
+    transition: $transition-default;
 
-  .close-ic {
-    fill: #3a71c0;
-    stroke: #3a71c0;
-    height: 21px;
-    width: 21px;
+    &:hover {
+      background-image: svg-load('svgCss/close.svg', stroke=#e5e5);
+    }
   }
+}
+
+.close-ic {
+  fill: $link-color;
+  stroke: $link-color;
+  transition: $transition-default;
+
+  &:hover {
+    fill: green;
+    stroke: green;
+  }
+  //height: 21px;
+  //width: 21px;
 }
