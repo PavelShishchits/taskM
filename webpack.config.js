@@ -38,7 +38,7 @@ const commonConfig = (argv) => {
     },
     pug(),
     fonts(),
-    images(),
+    images(argv),
     babel(),
     sass(argv),
     svgSprite()
@@ -72,4 +72,3 @@ module.exports = ((env, argv) => {
 // toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes)
 // toDo png icon generator
 // toDo media queries in js
-// toDo image optimization
