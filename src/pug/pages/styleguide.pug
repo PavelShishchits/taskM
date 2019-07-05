@@ -1,0 +1,12 @@
+extends ../layouts/main
+block pagePROPS
+  - PROPS.pageTitle = 'Styleguide page';
+  - PROPS.layout = 'aside';
+block title
+  h1 Style guide
+block content
+  include ../../components/core/titles/index
+  include ../../components/core/text-elements/index
+  include ../../components/core/list/index
+  include ../../components/core/helpers/index
+  include ../../components/core/btns/index

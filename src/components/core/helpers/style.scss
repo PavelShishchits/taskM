@@ -1,0 +1,111 @@
+// ================= Text block ===================
+// ================================================
+
+// Text decoration
+.line-through {
+  text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.decor-none {
+  text-decoration: none;
+
+  @include hover-focus() {
+    text-decoration: none;
+  }
+}
+
+// Links
+.lnk {
+  border-bottom: 1px solid;
+  text-decoration:none;
+  cursor: pointer;
+  color: $link-color;
+  line-height: 1;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $link-color-hover;
+  }
+}
+
+.lnk-pseudo {
+  border-bottom: 1px dashed;
+  text-decoration:none;
+  cursor: pointer;
+  color: $link-color;
+  line-height: 1;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $link-color-hover;
+  }
+}
+// Text underline
+// Must go after ._lnk for you to rewrite the underline style
+.dash {
+  border-bottom: 1px dashed;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.dot {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+// =================== Other ======================
+// ================================================
+
+.invisible {
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+.break-word {
+  @include break-word();
+}
+
+.nowrap  {
+  @include nowrap();
+}

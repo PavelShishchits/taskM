@@ -1,6 +1,23 @@
+
 @mixin hover-focus {
   &:hover,
   &:focus {
+    @content;
+  }
+}
+
+@mixin self-hover-focus {
+  &,
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
     @content;
   }
 }
@@ -43,4 +60,21 @@
   &::-webkit-input-placeholder {
     color: $color;
   }
+}
+
+@mixin nowrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// Transfer of long words to the next line
+@mixin break-word() {
+  overflow-wrap: break-word;//does not support IE, Firefox; is a copy of word-wrap
+  word-wrap: break-word;
+}
+
+@mixin skip-font-styles() {
+  font-weight: normal;
+  font-style: normal;
 }

@@ -50,7 +50,7 @@ $grid-breakpoint-max:               $screen-md-max;
 // brands
 $brand-1:                           #3a71c0;
 $brand-1-active:                    #1570ae;
-$brand-2:                           #005b96;
+$brand-2:                           #074396;
 $brand-2-active:                    #084d96;
 $brand-3:                           #57a801;
 $brand-3-active:                    #438101;
@@ -102,6 +102,8 @@ $input-border-color:                $brand-gray-5;
 $input-focus-border-color:          $brand-1;
 $input-error-border-color:          $brand-danger;
 $input-placeholder-color:           $caption-color;
+
+$mark-bg:                           #FFEAB9;
 
 // =====================================
 // Typography
