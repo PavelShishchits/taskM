@@ -1,7 +1,9 @@
+const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+// modules
 const sass = require('./webpack/sass');
 const pug = require('./webpack/pug');
 const favicon = require('./webpack/favicon');
@@ -26,7 +28,13 @@ const commonConfig = (argv) => {
       output: {
         filename: mode === 'production' ? './js/[name].min.js' : './js/[name].js',
         path: PATHS.dist
-      }
+      },
+      plugins: [
+        new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery'
+        })
+      ]
     },
     pug(),
     fonts(),
@@ -61,8 +69,7 @@ module.exports = ((env, argv) => {
 });
 
 // todos
-// toDo include jquery
-// toDo svg icon generator
+// toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes)
 // toDo png icon generator
 // toDo media queries in js
 // toDo image optimization

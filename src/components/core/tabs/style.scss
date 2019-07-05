@@ -28,16 +28,3 @@
     }
   }
 }
-
-.close-ic {
-  fill: $link-color;
-  stroke: $link-color;
-  transition: $transition-default;
-
-  &:hover {
-    fill: green;
-    stroke: green;
-  }
-  //height: 21px;
-  //width: 21px;
-}
