@@ -31,7 +31,7 @@ module.exports = (argv) => {
                                 plugins: [
                                     inlinesvg(),
                                     postcsssvgo(),
-                                    mqpacker(),
+                                    // mqpacker(),
                                     autoprefixer()
                                 ]
                             }

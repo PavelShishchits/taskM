@@ -1,0 +1,30 @@
+.table-wrap.table-adaptive {
+
+  table {
+
+    @media (max-width: $screen-sm-max) {
+
+      thead {
+        display: none;
+      }
+
+      tbody {
+        display: block;
+        @include clearfix;
+      }
+
+      tr {
+        @include clearfix;
+        float: left;
+        width: 100%;
+        border: 1px solid $border-color-base;
+      }
+
+      td {
+        float: left;
+        width: 100%;
+        padding: 9px 11px 11px;
+      }
+    }
+  }
+}

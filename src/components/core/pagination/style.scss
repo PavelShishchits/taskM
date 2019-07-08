@@ -1,0 +1,132 @@
+// Pagination
+
+$pagination-padding-y:              .8rem;
+$pagination-padding-x:              1.3rem;
+$pagination-line-height:            1.25;
+$pagnation-border-radius:           0;
+
+$pagination-fz:                     1.8rem;
+$pagination-color:                  $link-color;
+$pagination-bg:                     transparent;
+
+$pagination-border-width:           0;
+$pagination-border-color:           $border-color-base;
+
+$pagination-hover-color:            $link-color-hover;
+$pagination-hover-bg:               transparent;
+$pagination-hover-border-color:     transparent;
+
+$pagination-active-color:           $link-color-active;
+$pagination-active-bg:              transparent;
+$pagination-active-border-color:    #C2CED4;
+
+$pagination-disabled-color:         $disabled-color;
+$pagination-disabled-bg:            transparent;
+$pagination-disabled-border-color:  transparent;
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 20px;
+}
+
+.page-link {
+  font-size: $pagination-fz;
+  position: relative;
+  display: block;
+  padding: $pagination-padding-y $pagination-padding-x;
+  line-height: $pagination-line-height;
+  color: $pagination-color;
+  text-decoration: underline;
+  margin-left: -$pagination-border-width;
+  background-color: $pagination-bg;
+  border: 0;
+  border-radius: $pagnation-border-radius;
+
+  @media (max-width: $screen-xs-max) {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  &:hover,
+  &:focus {
+    z-index: 2;
+    color: $pagination-hover-color;
+    background-color: $pagination-hover-bg;
+    border-color: $pagination-hover-border-color;
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .page-link elements
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+}
+
+.page-item {
+
+  &:first-child {
+
+    .page-link {
+      margin-left: 0;
+    }
+  }
+
+  .prev {
+
+    svg {
+      transform: scale(-1, 1);
+    }
+  }
+
+  .prev,
+  .next {
+
+    svg {
+      width: 8px;
+      height: 18px;
+      fill: $link-color;
+    }
+
+    @include hover-focus {
+
+      svg {
+        fill: $link-color-hover;
+      }
+    }
+  }
+
+  &.active .page-link {
+    z-index: 1;
+    color: $pagination-active-color;
+    cursor: default;
+    background-color: $pagination-active-bg;
+    border-color: $pagination-active-border-color;
+
+    &.prev,
+    &.next {
+
+      svg {
+        fill: $link-color-active;
+      }
+    }
+  }
+
+  &.disabled .page-link {
+    color: $pagination-disabled-color;
+    pointer-events: none;
+    // Opinionated: remove the "hand" cursor set previously for .page-link
+    cursor: auto;
+    background-color: $pagination-disabled-bg;
+    border-color: $pagination-disabled-border-color;
+
+    &.prev,
+    &.next {
+
+      svg {
+        fill: $disabled-color;
+      }
+    }
+  }
+}

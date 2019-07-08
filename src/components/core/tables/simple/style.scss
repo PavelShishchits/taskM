@@ -1,0 +1,106 @@
+//
+// Tables
+// --------------------------------------------------
+
+table {
+  border-collapse: collapse; // Prevent double borders
+}
+
+th {
+  // Matches default `<td>` alignment by inheriting from the `<body>`, or the
+  // closest parent with a set `text-align`.
+  text-align: inherit;
+}
+
+.table-wrap {
+  margin-bottom: 32px;
+
+  table {
+    max-width: 100%;
+    width: 100%;
+    background-color: transparent;
+
+    td,
+    th {
+      border-left: 1px solid transparent; //Firefox fix for right displaying tables
+      border-right: 1px solid transparent; //Firefox fix for right displaying tables
+      padding: 18px 20px;
+
+      @media (max-width: $screen-lg-max) {
+        padding-left: 12px;
+        padding-right: 12px;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+
+        &:last-child {
+          padding-right: 20px;
+        }
+      }
+
+      @media (max-width: $screen-sm-max) {
+
+        &:first-child {
+          padding-left: 15px;
+        }
+
+        &:last-child {
+          padding-right: 15px;
+        }
+      }
+    }
+
+    // The cell of header table
+    th {
+      text-align: left;
+      color: $headings-color;
+      font-size: 15px;
+      line-height: (19/15);
+      font-family: $font-m;
+      background: #d2e6f3;
+      font-weight: normal;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    // The body of table
+    tbody {
+      // Line in the body of table
+      tr {
+        border-bottom: 1px solid $border-color-base;
+
+        // enable hover
+        //@include hover-focus() {
+        //  background: #f9f9f9;
+        //  transition: all 0.15s;
+        //}
+      }
+    }
+
+    // Cell in the body of table
+    td {
+      vertical-align: top;
+    }
+
+    &.full-border {
+
+      th,
+      td {
+        border: 1px solid $border-color-base;
+      }
+    }
+  }
+}
+
+.table-responsive {
+  overflow-x: auto;
+
+  @media (max-width: $screen-sm-max) {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid $border-color-base;
+  }
+}
