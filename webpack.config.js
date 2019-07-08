@@ -71,6 +71,5 @@ module.exports = ((env, argv) => {
 // todos
 // toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes)
 // toDo png icon generator
-// toDo media queries in js
 // toDo detectors (isIe, js-on)
 // toDo setUp base components (tables, pagination, breadcrumbs, forms)

@@ -43,6 +43,22 @@ $site-max-width:                    1920px;
 $grid-breakpoint-min:               $screen-lg-min;
 $grid-breakpoint-max:               $screen-md-max;
 
+:export {
+  screen_xs_min: $screen-xs-min;
+  screen_sm_min: $screen-sm-min;
+  screen_md_min: $screen-md-min;
+  screen_lg_min: $screen-lg-min;
+  screen_xl_min: $screen-xl-min;
+  screen_xs_max: $screen-xs-max;
+  screen_sm_max: $screen-sm-max;
+  screen_md_max: $screen-md-max;
+  screen_lg_max: $screen-lg-max;
+  container_sm: $container-sm;
+  container_md: $container-md;
+  container_lg: $container-lg;
+  container_xl: $container-xl;
+}
+
 // =====================================
 // Colors
 // =====================================
