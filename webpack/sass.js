@@ -50,7 +50,7 @@ module.exports = (argv) => {
     };
     if (isProduction) {
         config.optimization = {
-            minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+            minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})]
         };
         config.plugins = [
             new MiniCssExtractPlugin({

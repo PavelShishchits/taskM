@@ -1,0 +1,22 @@
+@function strip-units($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+:export {
+  screen_xs_min: strip-units($screen-xs-min);
+  screen_sm_min: strip-units($screen-sm-min);
+  screen_md_min: strip-units($screen-md-min);
+  screen_lg_min: strip-units($screen-lg-min);
+  screen_xl_min: strip-units($screen-xl-min);
+  screen_xs_max: strip-units($screen-xs-max);
+  screen_sm_max: strip-units($screen-sm-max);
+  screen_md_max: strip-units($screen-md-max);
+  screen_lg_max: strip-units($screen-lg-max);
+  container_sm: strip-units($container-sm);
+  container_md: strip-units($container-md);
+  container_lg: strip-units($container-lg);
+  container_xl: strip-units($container-xl);
+}

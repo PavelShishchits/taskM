@@ -73,4 +73,5 @@ module.exports = ((env, argv) => {
 // toDo png icon generator
 // toDo detectors (isIe, js-on)
 // toDo setUp base components (breadcrumbs, forms)
-// toDO find why mqpacker sort mediaqeuries wrong
+// toDo find why mqpacker sort mediaqeuries wrong
+// toDo implement webpack analyzer https://www.npmjs.com/package/webpack-bundle-analyzer

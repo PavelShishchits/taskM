@@ -1,10 +1,10 @@
-import variables from '../../scss/globUtils/_variables.scss';
+import variables from '../../scss/globUtils/_exportVars.scss';
 
 let breakpoints = {};
 
 for (let key in variables) {
     if (variables.hasOwnProperty(key) ) {
-        breakpoints[key] = +variables[key].replace('px', '');
+        breakpoints[key] = +variables[key];
     }
 }
 
