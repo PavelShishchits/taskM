@@ -1,6 +1,7 @@
 const sass = require('sass');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
+const sortCSSmq = require('sort-css-media-queries');
 const inlinesvg = require('postcss-inline-svg');
 const postcsssvgo = require('postcss-svgo');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -31,7 +32,9 @@ module.exports = (argv) => {
                                 plugins: [
                                     inlinesvg(),
                                     postcsssvgo(),
-                                    // mqpacker(),
+                                    mqpacker({
+                                        sort: sortCSSmq.desktopFirst
+                                    }),
                                     autoprefixer()
                                 ]
                             }

@@ -75,4 +75,6 @@ module.exports = ((env, argv) => {
 // toDo png icon generator
 // toDo detectors (isIe, js-on)
 // toDo setUp base components (breadcrumbs, forms)
-// toDo find why mqpacker sort mediaqeuries wrong
+// toDo open webpack analyzer by separate command
+// toDo implement post css styleling
+// toDo implement eslint
