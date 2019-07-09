@@ -1,10 +1,3 @@
-@function strip-units($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
-  }
-  @return $number;
-}
-
 :export {
   screen_xs_min: strip-units($screen-xs-min);
   screen_sm_min: strip-units($screen-sm-min);

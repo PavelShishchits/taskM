@@ -1,7 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 const merge = require('webpack-merge');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 
 // modules
 const sass = require('./webpack/sass');
@@ -51,7 +52,8 @@ module.exports = ((env, argv) => {
     return merge([
       {
         plugins: [
-          new CleanWebpackPlugin()
+          new CleanWebpackPlugin(),
+          new BundleAnalyzerPlugin()
         ]
       },
       commonConfig(argv),
@@ -62,7 +64,7 @@ module.exports = ((env, argv) => {
       commonConfig(argv),
       devserver(),
       {
-        devtool: 'eval-sourcemap',
+        devtool: 'eval-sourcemap'
       }
     ])
   }
@@ -74,4 +76,3 @@ module.exports = ((env, argv) => {
 // toDo detectors (isIe, js-on)
 // toDo setUp base components (breadcrumbs, forms)
 // toDo find why mqpacker sort mediaqeuries wrong
-// toDo implement webpack analyzer https://www.npmjs.com/package/webpack-bundle-analyzer
