@@ -13,6 +13,7 @@ const images = require('./webpack/images');
 const babel = require('./webpack/babel');
 const devserver = require('./webpack/devserver');
 const svgSprite = require('./webpack/svgSprite');
+const pngSprite = require('./webpack/pngSprite');
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
@@ -30,11 +31,14 @@ const commonConfig = (argv) => {
         filename: mode === 'production' ? './js/[name].min.js' : './js/[name].js',
         path: PATHS.dist
       },
+      resolve: {
+        modules: ["node_modules", "images"]
+      },
       plugins: [
         new webpack.ProvidePlugin({
           $: 'jquery',
           jQuery: 'jquery'
-        })
+        }),
       ]
     },
     pug(),
@@ -42,7 +46,8 @@ const commonConfig = (argv) => {
     images(argv),
     babel(),
     sass(argv),
-    svgSprite()
+    svgSprite(),
+    pngSprite()
   ])
 };
 
@@ -78,3 +83,4 @@ module.exports = ((env, argv) => {
 // toDo open webpack analyzer by separate command
 // toDo implement post css styleling
 // toDo implement eslint
+// toDo repair breakpoints http://prntscr.com/ocoxsr

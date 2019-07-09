@@ -1,15 +1,10 @@
 // =====================================
-// main
+// main (partly imported via webpack config)
 // =====================================
 
 @import "main/fonts";
-
-// =====================================
-// globUtils imported via webpack config
-// =====================================
-
-@import "./globUtils/functions";
-@import "./globUtils/exportVars";
+@import "main/functions";
+@import "main/exportVars";
 
 // =====================================
 // Base
@@ -31,7 +26,8 @@
 // Utils
 // =====================================
 
-@import "./utils/icons";
+@import "./utils/svg/icons";
+@import "./utils/png/icons";
 
 // =====================================
 // Components

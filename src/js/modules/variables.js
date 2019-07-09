@@ -1,4 +1,4 @@
-import variables from '../../scss/globUtils/_exportVars.scss';
+import variables from '../../scss/main/_exportVars.scss';
 
 let breakpoints = {};
 

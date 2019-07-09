@@ -43,7 +43,7 @@ module.exports = (argv) => {
                             loader: 'sass-loader',
                             options: {
                                 implementation: sass,
-                                data: '@import "./src/scss/globUtils/style";'
+                                data: '@import "./src/scss/data";'
                             }
                         }
                     ]

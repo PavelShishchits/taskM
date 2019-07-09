@@ -1,0 +1,10 @@
+[class*='png-']{
+    display: inline-block;
+    &:before {
+        @include png;
+    }
+}
+
+.png-star-big:before {
+    @include png-star-big;
+}

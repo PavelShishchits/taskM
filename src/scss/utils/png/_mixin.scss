@@ -1,0 +1,12 @@
+
+@mixin png() {
+    content: '';
+    display: inline-block;
+    background-image: url('~sprite.png');
+}
+
+@mixin png-star-big() {
+    background-position: 0px 0px;
+    width: 21px;
+    height: 23px;
+}

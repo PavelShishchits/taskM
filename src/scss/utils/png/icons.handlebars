@@ -1,0 +1,14 @@
+{{#block "spritesheet"}}
+[class*='png-']{
+    display: inline-block;
+    &:before {
+        @include png;
+    }
+}
+{{/block}}
+
+{{#each sprites}}
+.png-{{name}}:before {
+    @include png-{{name}};
+}
+{{/each}}
