@@ -1,3 +1,5 @@
+@import "functions";
+
 :export {
   screen_xs_min: strip-units($screen-xs-min);
   screen_sm_min: strip-units($screen-sm-min);

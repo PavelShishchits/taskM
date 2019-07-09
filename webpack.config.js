@@ -77,10 +77,8 @@ module.exports = ((env, argv) => {
 
 // todos
 // toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes)
-// toDo png icon generator
 // toDo detectors (isIe, js-on)
 // toDo setUp base components (breadcrumbs, forms)
 // toDo open webpack analyzer by separate command
 // toDo implement post css styleling
 // toDo implement eslint
-// toDo repair breakpoints http://prntscr.com/ocoxsr
