@@ -32,7 +32,7 @@ const commonConfig = (argv) => {
         path: PATHS.dist
       },
       resolve: {
-        modules: ["node_modules", "images"]
+        modules: ['node_modules', 'images']
       },
       plugins: [
         new webpack.ProvidePlugin({
@@ -82,3 +82,6 @@ module.exports = ((env, argv) => {
 // toDo open webpack analyzer by separate command
 // toDo implement post css styleling
 // toDo implement eslint
+// toDo add hash numbers to css and js bunlde
+// toDo move nodemodules to chank http://prntscr.com/od27dm
+// toDo png sprite usage (Readme.md)
