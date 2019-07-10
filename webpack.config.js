@@ -27,8 +27,25 @@ const commonConfig = (argv) => {
       entry: {
         app: path.join(PATHS.src, 'index.js')
       },
+      optimization: {
+        splitChunks: {
+          cacheGroups: {
+            app: {
+              chunks: "initial",
+              minChunks: 2
+            },
+            vendor: {
+              test: /node_modules/,
+              chunks: "initial",
+              name: "vendor",
+              priority: 10,
+              enforce: true
+            }
+          }
+        }
+      },
       output: {
-        filename: mode === 'production' ? './js/[name].min.js' : './js/[name].js',
+        filename: mode === 'production' ? './js/[name].[hash].js' : './js/[name].js',
         path: PATHS.dist
       },
       resolve: {
@@ -82,6 +99,6 @@ module.exports = ((env, argv) => {
 // toDo open webpack analyzer by separate command
 // toDo implement post css styleling
 // toDo implement eslint
-// toDo add hash numbers to css and js bunlde
-// toDo move nodemodules to chank http://prntscr.com/od27dm
-// toDo png sprite usage (Readme.md)
+// toDo resolve conflict with favicon http://prntscr.com/od7nw1
+
+
