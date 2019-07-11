@@ -76,7 +76,7 @@ module.exports = ((env, argv) => {
       {
         plugins: [
           new CleanWebpackPlugin(),
-          new BundleAnalyzerPlugin()
+          // new BundleAnalyzerPlugin()
         ]
       },
       commonConfig(argv),
