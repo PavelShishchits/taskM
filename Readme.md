@@ -1,6 +1,6 @@
 Template based on webpack 4
 
-## Svg icons
+## Icons
 1) inline svg as background image  
 dir - svgCss/icon.svg  
 usage - background-image: svg-load('svgCss/close.svg', fill=#000, stroke=#e5e5e5);
@@ -13,4 +13,10 @@ usage - svg(class='icon icon--iconName'> use(xlink:href='#iconName')
 dir - src/images/pngIcons. Generated files and styles template are in src/scss/utils/png
 usage - sass: @include png; @include png-star-big;  
         pug: i.png-start-big
-            
+        
+## Stylelint  
+To disabled stylelint rules use:  
+/* stylelint-disable */  
+a {}  
+/* stylelint-enable */
+    

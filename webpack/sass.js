@@ -1,9 +1,11 @@
+const path = require('path');
 const sass = require('sass');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
 const sortCSSmq = require('sort-css-media-queries');
 const inlinesvg = require('postcss-inline-svg');
 const postcsssvgo = require('postcss-svgo');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
@@ -49,7 +51,12 @@ module.exports = (argv) => {
                     ]
                 }
             ]
-        }
+        },
+        plugins: [
+            new StyleLintPlugin({
+                configFile:  path.resolve('./.stylelintrc'),
+            }),
+        ]
     };
     if (isProduction) {
         config.optimization = {

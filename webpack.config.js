@@ -93,13 +93,11 @@ module.exports = ((env, argv) => {
 });
 
 // todos
-// toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes)
-// toDo detectors (isIe, js-on)
-// toDo setUp base components (breadcrumbs, forms)
-// toDo open webpack analyzer by separate command
-// toDo implement post css styleling
-// toDo implement eslint
-// toDo resolve conflict with favicon http://prntscr.com/od7nw1
-// toDo make async font loading
-// toDo why PROPS undefined in included files
+// toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes) (2)
+// toDo detectors (isIe, js-on) (1)
+// toDo setUp base components (breadcrumbs, forms) (1)
+// toDo open webpack analyzer by separate command (2)
+// toDo implement eslint (1)
+// toDo make async font loading (2)
+// toDo find good stylelint config (2)
 
