@@ -1,18 +1,18 @@
 block props
   -
-    let PROPS = {// Global variables
+    const PROPS = {// Global variables
       bodyClass: '',// body className
       pageTitle: 'Page',// Page title
       layout: 'aside',// layout type: wide, aside
       isMain: false,// is the main page
       DIR: ''// The path relative to the folder src/pages
     };
+    locals.PROPS = PROPS;
 block pagePROPS
 doctype html
 html(lang='en')
   head
     include ../meta/head
-    title #{PROPS.pageTitle}
   body.en.no-js(class=PROPS.bodyClass + (PROPS.isMain === true ? ' main' : ' inner'))
     .site-wrap
       .site-bg

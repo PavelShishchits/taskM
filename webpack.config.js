@@ -64,7 +64,8 @@ const commonConfig = (argv) => {
     babel(),
     sass(argv),
     svgSprite(),
-    pngSprite()
+    pngSprite(),
+    favicon()
   ])
 };
 
@@ -79,7 +80,6 @@ module.exports = ((env, argv) => {
         ]
       },
       commonConfig(argv),
-      favicon()
     ])
   } else if (mode === 'development') {
     return merge([
@@ -100,5 +100,6 @@ module.exports = ((env, argv) => {
 // toDo implement post css styleling
 // toDo implement eslint
 // toDo resolve conflict with favicon http://prntscr.com/od7nw1
-
+// toDo make async font loading
+// toDo why PROPS undefined in included files
 

@@ -17,9 +17,9 @@ module.exports = () => {
                 // don't rebuild the favicons until those hashes change
                 persistentCache: false,
                 // Inject the html into the html-webpack-plugin
-                inject: true,
+                inject: false,
                 // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
-                background: '#fff',
+                background: '#3a71c0',
                 // favicon app title (see https://github.com/haydenbleasel/favicons#usage)
                 title: 'Webpack App',
 
