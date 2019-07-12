@@ -99,4 +99,5 @@ module.exports = ((env, argv) => {
 // toDo open webpack analyzer by separate command (2)
 // toDo make async font loading (2)
 // toDo find good stylelint config (3)
+// toDo style multiselect
 

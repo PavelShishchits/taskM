@@ -1,0 +1,56 @@
+include ../input/index
+include ../select/index
+include ../checkbox/index
+
+form.form(method='post', action='/')
+  .form__inner.form-row
+    .form__col.col-md-6
+      .form__item.control-group
+        label.form__label(for='form_NAME') Name
+        .form__input
+          +input({
+              id: 'form_NAME',
+              name: 'form_NAME',
+              type: 'text',
+              required: true
+          })
+          .form__validation
+    .form__col.col-md-6
+      .form__item.control-group
+        label.form__label(for='form_EMAIL') Email
+        .form__input
+          +input({
+              id: 'form_EMAIL',
+              name: 'form_EMAIL',
+              type: 'email',
+              required: true,
+              placeholder: 'Enter email'
+          })
+          .form__validation
+    .form__col.col
+      .form__item.control-group
+        label.form__label(for='form_CITIES') Select
+        .form__input
+          +select({
+              id: 'form_CITIES',
+              name: 'form_CITIES',
+              required: true
+          })
+          .form__validation
+    .form__col.col
+      .form__item.control-group
+        label.form__label(for='form_CITIES-2') Select with placeholder
+        .form__input
+          +select({
+              id: 'form_CITIES-2',
+              name: 'form_CITIES-2',
+              required: true,
+              placeholder: 'Choose option',
+              list: [
+                  {text: ''},
+                  {text: 'Option 1'},
+                  {text: 'Option 2', disabled: 'true'},
+                  {text: 'Option 3 Option'}
+              ]
+          })
+          .form__validation

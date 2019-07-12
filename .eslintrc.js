@@ -5,7 +5,8 @@ module.exports = {
     ecmaFeatures: {
         "modules": true,
         "spread" : true,
-        "restParams" : true
+        "restParams" : true,
+        "destructuring": true
     },
     env: {
         "browser" : true,
@@ -19,12 +20,12 @@ module.exports = {
         "no-dupe-keys": "error", // Запрет дублирования свойств объекта - https://eslint.org/docs/rules/no-dupe-keys
         "no-empty": "error", // Запрет пустых блоков выражений - https://eslint.org/docs/rules/no-empty
         "no-use-before-define": "error", // Запрет вызова или использования функций и перменых до их объявления - https://eslint.org/docs/rules/no-use-before-define
-        "no-unused-vars": [ // Запрет использования неиспользуемых переменных - https://eslint.org/docs/rules/no-unused-vars
-            "error",
-            {
-                "args": "all" //Все аргументы функции должны быть использованы
-            }
-        ],
+        // "no-unused-vars": [ // Запрет использования неиспользуемых переменных - https://eslint.org/docs/rules/no-unused-vars
+        //     "error",
+        //     {
+        //         "args": "none" //Все аргументы функции должны быть использованы
+        //     }
+        // ],
         "no-undef-init": "error", // Запрет undefined при инициализации значения переменной - https://eslint.org/docs/rules/no-undef-init
         "no-obj-calls": "error", // Запрет вызова свойств глобальных объектов как функций - https://eslint.org/docs/rules/no-obj-calls
         "no-irregular-whitespace": [

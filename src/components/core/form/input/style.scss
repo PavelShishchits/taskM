@@ -1,0 +1,53 @@
+@mixin form-control {
+  display: block;
+  width: 100%;
+  padding: 5px 11px;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  color: $input-color;
+  background-color: $input-bg;
+  background-clip: padding-box;
+  border: 1px solid $input-border-color;
+  border-radius: $border-radius-base;
+  box-shadow: none;
+  appearance: none;
+  transition: all .25s ease;
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+
+  &:focus {
+    background-color: $input-bg;
+    border-color: $input-focus-border-color;
+    outline: 0;
+  }
+
+  // Unstyle the caret on `<select>`s in IE10+.
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  // Placeholder
+  &::placeholder {
+    color: lighten($text-color, 0.7);
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
+  }
+
+  // Disabled and read-only inputs
+  //
+  // HTML5 says that controls under a fieldset > legend:first-child won't be
+  // disabled if the fieldset is disabled. Due to implementation difficulty, we
+  // don't honor that edge case; we style them as disabled anyway.
+  &:disabled,
+  &[readonly] {
+    background-color: #fff;
+    cursor: not-allowed;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
+  }
+}
+
+.form-control {
+  @include form-control;
+}

@@ -1,0 +1,30 @@
+mixin select(data)
+  -
+    var defaultList = [
+      {text: 'Option selected', value: '', selected: true},
+      {text: 'Option 1 optionoption optionoptionoption 1'},
+      {text: 'Option 2'},
+      {text: 'Option 3'},
+      {text: 'Option 4 Option'}
+    ]
+    var cl = data.className !== undefined ? data.className : 'form-control';
+    var mtpl = (data.multiple !== true ? ' select2' : '');
+    var className = cl + mtpl;
+    var attr = {};
+    if (data.id !== undefined) attr.id = data.id;
+    if (data.name !== undefined) attr.name = data.name;
+    else if (data.id !== undefined) attr.name = attr.id;
+    if (data.placeholder !== undefined) attr['data-placeholder'] = data.placeholder;
+    if (data.size !== undefined) attr.size = data.size;
+    if (data.multiple !== undefined) attr.multiple = data.multiple;
+    if (data.required !== undefined) attr.required = data.required;
+    if (data.disabled !== undefined) attr.disabled = data.disabled;
+  select(class=className)&attributes(attr)
+    - var list = data.list !== undefined ? data.list : defaultList;
+    each item in list
+      -
+        var optionAttr = {};
+        if (item.value !== undefined) optionAttr.value = item.value;
+        if (item.selected !== undefined) optionAttr.selected = item.selected;
+        if (item.disabled !== undefined) optionAttr.disabled = item.disabled;
+      option&attributes(optionAttr) !{item.text}
