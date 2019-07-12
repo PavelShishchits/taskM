@@ -26,7 +26,7 @@ module.exports = () => {
                         {
                             loader: "eslint-loader",
                             options: {
-                                eslintPath: resolve('./.eslintrc.js')
+                                configFile: resolve('./.eslintrc.js')
                             }
                         }
                     ]

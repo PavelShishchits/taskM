@@ -1,13 +1,19 @@
 module.exports = {
     parserOptions: {
-        "ecmaVersion": 6, // Поддерживаемая версия ECMAScript
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true
-        }
+        "sourceType": "module"
+    },
+    ecmaFeatures: {
+        "modules": true,
+        "spread" : true,
+        "restParams" : true
+    },
+    env: {
+        "browser" : true,
+        "node" : true,
+        "es6" : true
     },
     rules: {
         "no-dupe-args": "error", // Запрет дублирования аргументов в функциях - https://eslint.org/docs/rules/no-dupe-args
-        "no-constant-condition": "error", // Запрет использования констант в условиях - https://eslint.org/docs/rules/no-constant-condition
         "no-unreachable": "error", // Запрет недостижимого кода - https://eslint.org/docs/rules/no-unreachable
         "no-duplicate-case": "error", // Запрет дублирования case с одинаковым значением - https://eslint.org/docs/rules/no-duplicate-case
         "no-dupe-keys": "error", // Запрет дублирования свойств объекта - https://eslint.org/docs/rules/no-dupe-keys
@@ -27,10 +33,6 @@ module.exports = {
                 "skipStrings": true, // Разрешить в строках
                 "skipComments": true // Разрешить в комментариях
             }
-        ],
-        "strict": [ // Запрет на неиспользование "use strict" - https://eslint.org/docs/rules/strict
-            "error",
-            'function'
         ],
         "array-bracket-spacing": [ // Запрет лишних пробелов при инициализации массивов - https://eslint.org/docs/rules/array-bracket-spacing
             "error",

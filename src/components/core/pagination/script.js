@@ -1,1 +1,1 @@
-import './svg/pagin-next.svg'
+import './svg/pagin-next.svg';
