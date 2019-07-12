@@ -61,11 +61,7 @@ html body {
   @media (min-width: $grid-breakpoint-min) {
 
     .main-sidebar + & {
-      padding-left: 30px;
+      padding-left: 20px;
     }
   }
-
-  //.main & {
-  //  padding-bottom: 20px;
-  //}
 }

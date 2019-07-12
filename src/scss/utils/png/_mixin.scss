@@ -5,6 +5,11 @@
     background-image: url('~sprite.png');
 }
 
+@mixin png-breadcrumb() {
+    background-position: -23px 0px;
+    width: 4px;
+    height: 7px;
+}
 @mixin png-star-big() {
     background-position: 0px 0px;
     width: 21px;

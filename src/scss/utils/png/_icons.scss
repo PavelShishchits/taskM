@@ -5,6 +5,9 @@
     }
 }
 
+.png-breadcrumb:before {
+    @include png-breadcrumb;
+}
 .png-star-big:before {
     @include png-star-big;
 }
