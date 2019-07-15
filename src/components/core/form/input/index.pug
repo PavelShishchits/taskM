@@ -15,5 +15,5 @@ mixin input(data)
     if (data.spellcheck !== undefined) attr.spellcheck = data.spellcheck;
     if (data.required !== undefined) attr.required = data.required;
     if (data.disabled !== undefined) attr.disabled = data.disabled;
-    if (data.valid_message !== undefined) attr.valid_message = data.valid_message
+    if (data.valid_message !== undefined) attr['data-valid_message'] = data.valid_message
   input(class=className)&attributes(attr)

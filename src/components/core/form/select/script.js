@@ -8,6 +8,10 @@ const initDefaultSelectbox = ($el) => {
         dropdownParent: $el.parent(),
         minimumResultsForSearch: -1, // remove search
     });
+
+    $el.on('select2:select', function (e) {
+        $(this).valid();
+    });
 };
 
 $(function () {

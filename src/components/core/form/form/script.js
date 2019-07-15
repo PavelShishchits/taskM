@@ -4,6 +4,10 @@ $(function () {
     Form.initValidDefaultSettings();
 
     $('.js-form').each(function () {
-        new Form($(this));
+        new Form($(this), {
+            messages: {
+                form_CITIES: 'Enter your city',
+            }
+        });
     });
 });

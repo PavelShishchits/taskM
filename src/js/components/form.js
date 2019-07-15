@@ -3,26 +3,48 @@ import validator from 'jquery-validation';
 export default class Form {
 
     constructor($el, settings) {
-        this.block = $el;
-        this.settings = $.extend({}, settings);
-        this.data = {};
-
+        this._block = $el;
+        this._settings = $.extend({}, {
+            rules: {},
+            messages: {}
+        }, settings);
+        this._data = {
+            requiredFields: null
+        };
         this.parseFields();
         this.initValidator();
     }
 
     parseFields() {
-        const {block} = this;
+        const {_block, _data} = this;
+        _data.requiredFields = _block.find('[required]');
+        this.generateRules();
+    }
+
+    generateRules() {
+        const {_data, _settings} = this;
+        _data.requiredFields.each(function () {
+            let field = $(this);
+            let name = field.attr('name');
+            if (field.data('valid_message')) {
+                _settings.messages[name] = field.data('valid_message');
+            }
+            _settings.rules[name] = $.extend({}, _settings.rules[name], {
+                required: true
+            });
+        });
     }
 
     initValidator() {
-        const {block} = this;
-        block.validate({});
+        const {_block, _data, _settings} = this;
+        _data.validationEntity = _block.validate(_settings);
+        console.log(_data.validationEntity);
     }
 
     static initValidDefaultSettings() {
 
         $.validator.setDefaults({
+            ignore: 'input[type=hidden]',
             errorPlacement: function (error, element) {
                 error.appendTo(element.closest('.control-group').find('.form__validation'));
             },
@@ -32,10 +54,8 @@ export default class Form {
             success: function (element) {// For valid OFF
                 element.closest('.control-group').removeClass('has-error');
                 element.remove();
+                // .addClass('has-success');
             }
-            //success: function(element) {// For valid ON
-            //    element.addClass('valid').closest('.control-group').removeClass('has-error').addClass('has-success');
-            //}
         });
 
         // Исправляем валидацию формата dd-mm-yyyy (работает dd-mm-yyyy, dd/mm/yyyy, dd.mm.yyyy)
@@ -47,19 +67,5 @@ export default class Form {
             }// http://stackoverflow.com/questions/15491894/regex-to-validate-date-format-dd-mm-yyyy
             //,"Please enter a date in the format dd/mm/yyyy."// Текст по умолчанию для ошибки
         );
-
-        // Валидация для маски телефона
-        $.validator.addMethod(
-            'requiredphone',
-            function (value) {
-                return value.replace(/\D+/g, '').length > 3;
-            },
-            'Заполните поле');
-        $.validator.addMethod(
-            'minlengthphone',
-            function (value) {
-                return value.replace(/\D+/g, '').length > 11;
-            },
-            'Заполните номер телефона полностью');
     }
 }

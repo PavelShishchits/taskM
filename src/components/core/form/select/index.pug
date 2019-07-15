@@ -1,11 +1,11 @@
 mixin select(data)
   -
     var defaultList = [
-      {text: 'Option selected', value: '', selected: true},
-      {text: 'Option 1 optionoption optionoptionoption 1'},
-      {text: 'Option 2'},
-      {text: 'Option 3'},
-      {text: 'Option 4 Option'}
+      {text: 'Option selected', selected: 'selected', val: 0},
+      {text: 'Option 1 optionoption optionoptionoption 1', val: 1},
+      {text: 'Option 2', val: 2},
+      {text: 'Option 3', val: 3},
+      {text: 'Option 4 Option', val: 4}
     ]
     var className = data.className !== undefined ? data.className : 'form-control select2';
     var attr = {};
@@ -17,7 +17,7 @@ mixin select(data)
     if (data.multiple !== undefined) attr.multiple = data.multiple;
     if (data.required !== undefined) attr.required = data.required;
     if (data.disabled !== undefined) attr.disabled = data.disabled;
-    if (data.valid_message !== undefined) attr.valid_message = data.valid_message
+    if (data.valid_message !== undefined) attr['data-valid_message'] = data.valid_message
   select(class=className)&attributes(attr)
     - var list = data.list !== undefined ? data.list : defaultList;
     each item in list
