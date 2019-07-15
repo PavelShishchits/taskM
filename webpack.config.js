@@ -95,10 +95,14 @@ module.exports = ((env, argv) => {
 // todos
 // toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes) (2) (svgo don't remove with and height)
 // toDo detectors (isIe, js-on) (2)
-// toDo setUp base components (forms) (1)
 // toDo open webpack analyzer by separate command (2)
 // toDo make async font loading (4)
 // toDo find good stylelint config (3)
 // toDo resolve path if .scss file included through app.scss svgCss/*.svg (2)
 // toDo select arrow as svg icon (3)
 
+// toDo setUp base components (forms) (1)
+// toDo implement form validation
+// toDo datepicker
+// toDo input[file]
+// toDo input[number] (ui-spinner)

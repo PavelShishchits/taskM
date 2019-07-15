@@ -13,4 +13,5 @@ mixin textarea(data)
     if (data.cols !== undefined) attr.cols = data.cols;
     if (data.required !== undefined) attr.required = data.required;
     if (data.disabled !== undefined) attr.disabled = data.disabled;
+    if (data.valid_message !== undefined) attr.valid_message = data.valid_message
   textarea(class=className)&attributes(attr)

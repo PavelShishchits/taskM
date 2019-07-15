@@ -5,12 +5,12 @@ const initDefaultSelectbox = ($el) => {
         return false;
     }
     $el.select2({
+        dropdownParent: $el.parent(),
         minimumResultsForSearch: -1, // remove search
     });
 };
 
 $(function () {
-
     $('.select2').each(function () {
         initDefaultSelectbox($(this));
     });

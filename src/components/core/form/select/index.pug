@@ -17,6 +17,7 @@ mixin select(data)
     if (data.multiple !== undefined) attr.multiple = data.multiple;
     if (data.required !== undefined) attr.required = data.required;
     if (data.disabled !== undefined) attr.disabled = data.disabled;
+    if (data.valid_message !== undefined) attr.valid_message = data.valid_message
   select(class=className)&attributes(attr)
     - var list = data.list !== undefined ? data.list : defaultList;
     each item in list

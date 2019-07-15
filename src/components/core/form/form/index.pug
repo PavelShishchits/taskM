@@ -2,8 +2,9 @@ include ../input/index
 include ../select/index
 include ../textarea/index
 include ../checkboxradio/index
+include ../../btns/btn/index
 
-form.form(method='post', action='/')
+form.form.js-form(method='post', action='/')
   .form__inner.form-row
     .form__col.col-md-6
       .form__item.control-group
@@ -13,7 +14,8 @@ form.form(method='post', action='/')
               id: 'form_NAME',
               name: 'form_NAME',
               type: 'text',
-              required: true
+              required: true,
+              valid_message: 'Fill this field'
           })
           .form__validation
     .form__col.col-md-6
@@ -100,3 +102,5 @@ form.form(method='post', action='/')
               name: 'form_MALE',
               text: 'Female'
           })
+    .form__col.col-12
+      +btn-primary({type: 'input', text: 'Submit'})
