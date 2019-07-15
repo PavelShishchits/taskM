@@ -1,6 +1,7 @@
 include ../input/index
 include ../select/index
-include ../checkbox/index
+include ../textarea/index
+include ../checkboxradio/index
 
 form.form(method='post', action='/')
   .form__inner.form-row
@@ -65,3 +66,37 @@ form.form(method='post', action='/')
               multiple: 'multiple'
           })
           .form__validation
+    .form__col.col-12
+      .form__item.control-group
+        label.form__label(for='form_MESSAGE') Your message
+        .form__input
+          +textarea({
+              id: 'form_MESSAGE',
+              name: 'form_MESSAGE'
+          })
+          .form__validation
+    .form__col.col-12
+      .form__item.control-group
+        .form__input
+          +checkboxradio({
+              type: 'checkbox',
+              id: 'form_CONFIRMATION',
+              name: 'form_CONFIRMATION',
+              text: 'Confirm your age is more then 18'
+          })
+    .form__col.col-12
+      .form__item.control-group
+        label.form__label(for='form_MALE') Select your male
+        .form__input
+          +checkboxradio({
+              type: 'radio',
+              id: 'form_MALE',
+              name: 'form_MALE',
+              text: 'Male'
+          })
+          +checkboxradio({
+              type: 'radio',
+              id: 'form_MALE-2',
+              name: 'form_MALE',
+              text: 'Female'
+          })

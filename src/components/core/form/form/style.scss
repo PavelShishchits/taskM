@@ -1,13 +1,13 @@
 @import "../form-utils/style";
 @import "../input/style";
 @import "../select/style";
-@import "../checkbox/style";
+@import "../checkboxradio/style";
 
 .form {
   margin: 0;
 
   &__col {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   &__validation {
