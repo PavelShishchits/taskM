@@ -7,9 +7,7 @@ mixin select(data)
       {text: 'Option 3'},
       {text: 'Option 4 Option'}
     ]
-    var cl = data.className !== undefined ? data.className : 'form-control';
-    var mtpl = (data.multiple !== true ? ' select2' : '');
-    var className = cl + mtpl;
+    var className = data.className !== undefined ? data.className : 'form-control select2';
     var attr = {};
     if (data.id !== undefined) attr.id = data.id;
     if (data.name !== undefined) attr.name = data.name;

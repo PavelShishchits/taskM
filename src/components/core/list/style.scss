@@ -50,116 +50,111 @@ ul ol {
   margin-bottom: 0;
 }
 
-// Unordered and Ordered lists
-.site-wrap {
+ul,
+ol {
 
-  ul,
-  ol {
+  &:not(.list-unstyled) {
+    // UL, OL - Level 1
+    list-style: none;
+    padding-left: 0;
+  }
 
-    &:not(.list-unstyled) {
-      // UL, OL - Level 1
-      list-style: none;
+  &.list {
+    position: relative; // Because sometimes content has more z-index
+    margin: $list-level1-margin-top 0 $list-level1-margin-bottom;
+    padding: 0 $list-padding-right 0 $list-padding-left;
+    font-size: $list-font-size;
+    line-height: $list-line-height;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: $list-item-1-margin-bottom;
+      border-collapse: separate; /*prevent error in table > ul > li*/
+    }
+    // UL, OL - Level 2
+    ul,
+    ol {
+      padding-left: 3px;
+      margin: $list-level-2-margin-top 0 $list-level-2-margin-bottom;
+
+      li {
+        margin-bottom: $list-item-2-margin-bottom;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// OL - Level 1
+ol {
+
+  &.list {
+    padding-left: ($list-padding-left / 2);
+    counter-reset: list 0; // Start counter from next digit
+
+    @media (max-width: $screen-sm-max) {
       padding-left: 0;
     }
 
-    &:not(.list-reset) {
-      position: relative; // Because sometimes content has more z-index
-      margin: $list-level1-margin-top 0 $list-level1-margin-bottom;
-      padding: 0 $list-padding-right 0 $list-padding-left;
-      font-size: $list-font-size;
-      line-height: $list-line-height;
+    > li {
+      display: table;
 
-      @media (max-width: $screen-sm-max) {
-        padding: 0;
+      &:before {
+        counter-increment: list; // counter up (list = +1, list list = +1+1...)
+        content: counter(list) ". "; // delimeter for counter and content
+        color: $ol-font-color;
+        display: table-cell;
+        padding-right: $list-item-before-pad-right;
       }
+    }
 
-      li {
-        margin-bottom: $list-item-1-margin-bottom;
-        border-collapse: separate; /*prevent error in table > ul > li*/
-      }
-      // UL, OL - Level 2
-      ul,
-      ol {
-        padding-left: 3px;
-        margin: $list-level-2-margin-top 0 $list-level-2-margin-bottom;
+    // OL - Level 2
+    ol > li {
 
-        li {
-          margin-bottom: $list-item-2-margin-bottom;
-
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
+      &:before {
+        content: counters(list, ".") ". "; // delimeter for counter and content
+        color: $ol-ol-font-color;
       }
     }
   }
+}
 
-  // OL - Level 1
-  ol {
-    &:not(.list-reset) {
-      padding-left: ($list-padding-left / 2);
-      counter-reset: list 0; // Start counter from next digit
+// UL - Level 1
+ul {
 
-      @media (max-width: $screen-sm-max) {
-        padding-left: 0;
+  &.list {
+
+    > li {
+      position: relative;
+      padding-left: 20px;
+
+      &:before {
+        position: absolute;
+        font-size: 30px;
+        left: 0;
+        top: -4px;
+        content: $list-item-1-content;
+        color: $ul-font-color;
+        line-height: 1;
       }
+    }
+
+    // UL - Level 2
+    ul {
 
       > li {
-        display: table;
 
         &:before {
-          counter-increment: list; // counter up (list = +1, list list = +1+1...)
-          content: counter(list) ". "; // delimeter for counter and content
-          color: $ol-font-color;
-          display: table-cell;
-          padding-right: $list-item-before-pad-right;
-        }
-      }
-
-      // OL - Level 2
-      ol > li {
-
-        &:before {
-          content: counters(list, ".") ". "; // delimeter for counter and content
-          color: $ol-ol-font-color;
+          content: $list-item-2-content;
+          color: $ul-ul-font-color;
         }
       }
     }
   }
-
-  // UL - Level 1
-  ul {
-
-    &:not(.list-reset) {
-
-      > li {
-        position: relative;
-        padding-left: 20px;
-
-        &:before {
-          position: absolute;
-          font-size: 30px;
-          left: 0;
-          top: -4px;
-          content: $list-item-1-content;
-          color: $ul-font-color;
-          line-height: 1;
-        }
-      }
-
-      // UL - Level 2
-      ul {
-
-        > li {
-
-          &:before {
-            content: $list-item-2-content;
-            color: $ul-ul-font-color;
-          }
-        }
-      }
-    }
-  }
-  // Set list ordered counter-reset
-  @include counter-reset-start(31);
 }

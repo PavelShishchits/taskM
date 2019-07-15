@@ -3,6 +3,7 @@
   margin: 0;
   position: relative;
   vertical-align: middle;
+  width: 100% !important;
 
   // single select
   .select2-selection--single {
@@ -36,33 +37,36 @@
       width: 30px;
 
       b {
-        //background-image: svg-load('svgCss/select-arrow.svg', stroke=#000);
-        height: 8px;
-        width: 12px;
-        position: absolute;
+        border-color: #888 transparent transparent transparent;
+        border-style: solid;
+        border-width: 5px 4px 0 4px;
+        height: 0;
         left: 50%;
+        margin-left: -4px;
+        margin-top: -2px;
+        position: absolute;
         top: 50%;
-        transform: translate(-50%, -50%);
+        width: 0;
       }
     }
   }
 
   //multiple select
   .select2-selection--multiple {
+    @include form-control;
     display: block;
-    min-height: 32px;
     user-select: none;
-    background-color: white;
-    border: 1px solid #aaa;
-    border-radius: 4px;
     cursor: text;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    min-height: 4rem;
 
     .select2-selection__rendered {
       display: inline-block;
       @include nowrap;
       list-style: none;
       margin: 0;
-      padding: 0 5px;
+      padding: 0;
       width: 100%;
 
       li {
@@ -79,14 +83,16 @@
     }
 
     .select2-selection__choice {
-      background-color: #e4e4e4;
+      background-color: $brand-gray-4;
       border: 1px solid $input-border-color;
-      border-radius: 4px;
+      border-radius: $border-radius-base;
       cursor: default;
       float: left;
       margin-right: 5px;
       margin-top: 5px;
       padding: 0 5px;
+      @include nowrap;
+      max-width: 100%;
     }
 
     .select2-selection__choice__remove {
@@ -106,6 +112,7 @@
     float: left;
 
     .select2-search__field {
+      position: absolute;
       border: none;
       font-size: 100%;
       margin-top: 5px;
@@ -173,7 +180,6 @@
   &--focus {
 
     .select2-selection--multiple {
-      border: solid black 1px;
       outline: 0;
     }
   }

@@ -100,4 +100,6 @@ module.exports = ((env, argv) => {
 // toDo make async font loading (2)
 // toDo find good stylelint config (3)
 // toDo style multiselect
+// toDo resolve path if .scss file included through app.scss svgCss/*.svg
+// toDo select arrow as svg icon
 

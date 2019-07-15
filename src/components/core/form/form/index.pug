@@ -27,7 +27,7 @@ form.form(method='post', action='/')
               placeholder: 'Enter email'
           })
           .form__validation
-    .form__col.col
+    .form__col.col-12.col-md-4
       .form__item.control-group
         label.form__label(for='form_CITIES') Select
         .form__input
@@ -37,7 +37,7 @@ form.form(method='post', action='/')
               required: true
           })
           .form__validation
-    .form__col.col
+    .form__col.col-12.col-md-4
       .form__item.control-group
         label.form__label(for='form_CITIES-2') Select with placeholder
         .form__input
@@ -52,5 +52,16 @@ form.form(method='post', action='/')
                   {text: 'Option 2', disabled: 'true'},
                   {text: 'Option 3 Option'}
               ]
+          })
+          .form__validation
+    .form__col.col-12.col-md-4
+      .form__item.control-group
+        label.form__label(for='form_CITIES-3') Select with placeholder
+        .form__input
+          +select({
+              id: 'form_CITIES-3',
+              name: 'form_CITIES-3',
+              required: true,
+              multiple: 'multiple'
           })
           .form__validation
