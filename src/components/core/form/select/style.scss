@@ -5,12 +5,23 @@
   vertical-align: middle;
   width: 100% !important;
 
+  .select2-selection {
+    display: block;
+    @include form-control;
+    user-select: none;
+
+    .has-error & {
+      border-color: $state-danger-text;
+
+      &:focus {
+        border-color: darken($state-danger-text, 10%);
+      }
+    }
+  }
+
   // single select
   .select2-selection--single {
-    @include form-control;
     cursor: pointer;
-    display: block;
-    user-select: none;
 
     .select2-selection__rendered {
       display: block;
@@ -53,9 +64,6 @@
 
   //multiple select
   .select2-selection--multiple {
-    @include form-control;
-    display: block;
-    user-select: none;
     cursor: text;
     padding-top: 2px;
     padding-bottom: 1px;
@@ -112,10 +120,12 @@
     float: left;
 
     .select2-search__field {
+      width: 0 !important;
       position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
       border: none;
-      font-size: 100%;
-      margin-top: 5px;
       padding: 0;
       background: transparent;
       outline: 0;

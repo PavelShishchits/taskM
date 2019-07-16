@@ -1,4 +1,4 @@
-import Form from "../../../../js/components/form";
+import Form from '../../../../js/components/form';
 
 $(function () {
     Form.initValidDefaultSettings();

@@ -74,7 +74,8 @@ form.form.js-form(method='post', action='/')
         .form__input
           +textarea({
               id: 'form_MESSAGE',
-              name: 'form_MESSAGE'
+              name: 'form_MESSAGE',
+              required: true
           })
           .form__validation
     .form__col.col-12
@@ -84,8 +85,10 @@ form.form.js-form(method='post', action='/')
               type: 'checkbox',
               id: 'form_CONFIRMATION',
               name: 'form_CONFIRMATION',
-              text: 'Confirm your age is more then 18'
+              text: 'Confirm your age is more then 18',
+              required: true
           })
+          .form__validation
     .form__col.col-12
       .form__item.control-group
         label.form__label(for='form_MALE') Select your male
@@ -94,13 +97,16 @@ form.form.js-form(method='post', action='/')
               type: 'radio',
               id: 'form_MALE',
               name: 'form_MALE',
-              text: 'Male'
+              text: 'Male',
+              required: true
           })
           +checkboxradio({
               type: 'radio',
               id: 'form_MALE-2',
               name: 'form_MALE',
-              text: 'Female'
+              text: 'Female',
+              required: true
           })
+          .form__validation
     .form__col.col-12
       +btn-primary({type: 'input', text: 'Submit'})

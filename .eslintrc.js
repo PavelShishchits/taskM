@@ -2,12 +2,6 @@ module.exports = {
     parserOptions: {
         "sourceType": "module"
     },
-    ecmaFeatures: {
-        "modules": true,
-        "spread" : true,
-        "restParams" : true,
-        "destructuring": true
-    },
     env: {
         "browser" : true,
         "node" : true,
