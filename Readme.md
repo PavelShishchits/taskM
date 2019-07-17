@@ -1,5 +1,7 @@
 Template based on webpack 4
-
+## Pug
+Import mixins in main.pug template (block mixin)  
+Don't inline images use path to image: img(src='./images/tabs_01.jpg' alt='alt')   
 ## Icons
 1) inline svg as background image  
 dir - svgCss/icon.svg  
