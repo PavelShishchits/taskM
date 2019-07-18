@@ -98,7 +98,7 @@ module.exports = ((env, argv) => {
 // toDo open webpack analyzer by separate command (2)
 // toDo find good stylelint config (3)
 // toDo make async font loading (4)
-// toDo implement JSon-server
+// toDo fill tables with english content (4)
 
 // forms
 // toDo datepicker (4)

@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "Id": "4b37d44759c5491391bb1ff1d3878acf",
+      "Url": "https://bwt.com/de-at/bwtcom1351extra/page-content/copy-of-new-product-configurator-product11/",
+      "Title": "Product_1",
+      "Category": "Tischwasserfilter",
+      "Price": "59,99",
+      "Position": "2",
+      "Image": "./images/tabs_01.jpg",
+      "Label": {
+        "Text": "Promo",
+        "Color": "#ffc0cb"
+      },
+      "Saletext": "41% sparen",
+      "Saleprice": "100",
+      "Variants": [
+        {
+          "Color": "#36aac9",
+          "Id": "da3",
+          "Price": "59,99",
+          "Saleprice": "100",
+          "Saletext": "41% sparen",
+          "Colortitle": "Cool Petrol",
+          "Teaserimage": "https://dev.bwt.com/en/-/media/bwt/products/vida/promo/vida-petrol_6er_promo-flasche-blue_d.png",
+          "Arrowcolor": "white"
+        },
+        {
+          "Color": "#e65c98",
+          "Id": "da3",
+          "Price": "49,99",
+          "Saleprice": "62",
+          "Saletext": "25% sparen",
+          "Colortitle": "Cool Petrol",
+          "Teaserimage": "https://dev.bwt.com/en/-/media/bwt/products/vida/promo/vida-pink_6er_promo-flasche-pink_d.png",
+          "Arrowcolor": "white"
+        }
+      ],
+      "List": "PLP_{1CF5B724-AF7F-476D-8304-F843E0FE8DF6}_produkte",
+      "CategoryIdList": [
+        "c986ec4fa38c454c92ff66bdb64f4d99",
+        "914ed861ddac448a8f501c84a9ab05d4",
+        "ccb91727f35543c28704cee6e957587c",
+        "1c2d9e0d5ca44800901f6571689f9034",
+        "c97412cf15054aa9805911649d46a7d7",
+        "2361f880b71c4d6caa829dd3e3ef781a",
+        "51ea4462ca0f465fbe31f201e122c135",
+        "5fbe654138c141829fbffa81f2c7ead2"
+      ]
+    },
+    {
+      "Id": "4b37d44759c5491391bb1ff1d3878acf",
+      "Url": "https://bwt.com/de-at/bwtcom1351extra/page-content/copy-of-new-product-configurator-product11/",
+      "Title": ",ew,ew",
+      "Image": "https://dev.bwt.com/en/-/media/bwt/products/vida/promo/vida-petrol_6er_promo-flasche-blue_d.png?h=200&w=200&la=en&hash=EDCEBCA383072718977398C5E33982F18C7763A8"
+    }
+  ]
+}

@@ -22,4 +22,9 @@ To disabled stylelint rules use:
 /* stylelint-disable */  
 a {}  
 /* stylelint-enable */
-    
+
+## Mocking data  
+To mock data:  
+1) create mockData.json file in component directory   
+2) copy relative path of this file and insert in in mock:api npm script in package.json  
+3) npm run mock:api
