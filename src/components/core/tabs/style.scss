@@ -24,12 +24,12 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    background-image: svg-load('svgCss/close.svg', stroke=#000);
+    background-image: svg-load('core/tabs/svgCss/close.svg', stroke=#000);
     background-size: cover;
     transition: $transition-default;
 
     &:hover {
-      background-image: svg-load('svgCss/close.svg', stroke=#e5e5);
+      background-image: svg-load('core/tabs/svgCss/close.svg', stroke=#e5e5);
     }
   }
 }

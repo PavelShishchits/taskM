@@ -48,16 +48,13 @@
       width: 30px;
 
       b {
-        border-color: #888 transparent transparent transparent;
-        border-style: solid;
-        border-width: 5px 4px 0 4px;
-        height: 0;
-        left: 50%;
-        margin-left: -4px;
-        margin-top: -2px;
         position: absolute;
+        left: 50%;
         top: 50%;
-        width: 0;
+        transform: translate(-50%, -50%);
+        width: 13px;
+        height: 8px;
+        background-image: svg-load('core/form/select/svgCss/select-arrow.svg', stroke=$brand-gray-9);
       }
     }
   }
@@ -179,8 +176,7 @@
 
       .select2-selection__arrow {
         b {
-          border-color: transparent transparent #888 transparent;
-          border-width: 0 4px 5px 4px;
+          background-image: svg-load('core/form/select/svgCss/select-arrow.svg', stroke=$link-color);
         }
       }
     }

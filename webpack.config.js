@@ -97,8 +97,6 @@ module.exports = ((env, argv) => {
 // toDo detectors (isIe, js-on) (2)
 // toDo open webpack analyzer by separate command (2)
 // toDo find good stylelint config (3)
-// toDo resolve path if .scss file included through app.scss svgCss/*.svg (2)
-// toDo select arrow as svg icon (3)
 // toDo make async font loading (4)
 // toDo implement JSon-server
 

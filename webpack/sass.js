@@ -32,7 +32,9 @@ module.exports = (argv) => {
                             options: {
                                 ident: 'postcss',
                                 plugins: [
-                                    inlinesvg(),
+                                    inlinesvg({
+                                        paths: [path.resolve('./src/components/')]
+                                    }),
                                     postcsssvgo(),
                                     mqpacker({
                                         sort: sortCSSmq.desktopFirst

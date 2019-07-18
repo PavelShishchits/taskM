@@ -38,7 +38,6 @@ export default class Form {
     initValidator() {
         const {_block, _data, _settings} = this;
         _data.validationEntity = _block.validate(_settings);
-        console.log(_data.validationEntity);
     }
 
     static initValidDefaultSettings() {

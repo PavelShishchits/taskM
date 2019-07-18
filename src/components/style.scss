@@ -1,20 +1,28 @@
 // =====================================
-// Components
+// Header
 // =====================================
-
-//header
 @import "./header/header/style";
 
-//footer
+// =====================================
+// Footer
+// =====================================
 @import "./footer/footer/style";
 
-//core
-@import "./core/breadcrumb/style";
+// =====================================
+// Core
+// =====================================
+
+// text
 @import "./core/titles/style";
 @import "./core/text-elements/style";
 @import "./core/list/style";
 @import "./core/helpers/style";
+
+// components
+@import "./core/breadcrumb/style";
 @import "./core/btns/style";
 @import "./core/pagination/style";
 @import "./core/tables/style";
+
+// form
 @import "./core/form/form/style";
