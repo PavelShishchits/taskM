@@ -1,4 +1,7 @@
 import Component from '../../../../js/components/core/component';
+import './style.scss';
+import './svg/close.svg';
+import './svg/twitter.svg';
 
 class TestCompontent extends Component {
 
@@ -21,6 +24,10 @@ class TestCompontent extends Component {
 
 $(function () {
     const container = $('.test-component');
+
+    if (!container.length) {
+        return false;
+    }
 
     const getData = (url) => {
         fetch(url)

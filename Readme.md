@@ -23,6 +23,10 @@ To disabled stylelint rules use:
 a {}  
 /* stylelint-enable */
 
+## Images  
+Images that used in component store in img directory,  
+source to all images is './images/*.*'
+
 ## Mocking data  
 To mock data:  
 1) create mockData.json file in component directory   

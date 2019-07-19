@@ -99,6 +99,7 @@ module.exports = ((env, argv) => {
 // toDo find good stylelint config (3)
 // toDo make async font loading (4)
 // toDo fill tables with english content (4)
+// toDo create config json file with paths (2)
 
 // forms
 // toDo datepicker (4)

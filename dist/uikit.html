@@ -6,7 +6,7 @@
 <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Styleguide page</title>
+<title>Ui-kit page</title>
 <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -16,7 +16,7 @@
 <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
 <meta name="msapplication-config" content="favicons/browserconfig.xml">
 <meta name="theme-color" content="#3a71c0">
-	<link href="css/app.0fe0a6de4879397c22ab.css" rel="stylesheet"></head>
+	</head>
 	<body class="en no-js  inner">
 		<div class="site-wrap">
 			<div class="site-bg">
@@ -35,7 +35,13 @@
 				</header>
 				<div class="main-wrap">
 					<div class="container">
-						<!--include ../../components/base/breadcrumb/index-->
+<nav>
+	<ol class="breadcrumb list-reset">
+		<li class="breadcrumb-item" typeof="v:Breadcrumb"><a href="#">Main page</a></li>
+		<li class="breadcrumb-item" typeof="v:Breadcrumb"><a href="#">subscription page</a></li>
+		<li class="breadcrumb-item active"><span>ui-kit page</span></li>
+	</ol>
+</nav>
 						<h1>Style guide</h1>
 						<div class="row">
 							<aside class="main-sidebar col-lg-3 col-12 d-print-none">
@@ -63,7 +69,7 @@
 <hr>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero. Ab, consectetur iusto obcaecati officiis placeat sequi ullam veritatis? Aliquam, porro? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero.</p>
 <h2>List styles</h2>
-<ul>
+<ul class="list">
 	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero.</li>
 	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero. Ab, consectetur iusto obcaecati officiis placeat sequi ullam veritatis? Aliquam, porro? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
 	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero. Ab, consectetur iusto obcaecati officiis placeat sequi ullam veritatis? Aliquam, porro? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -75,7 +81,7 @@
 	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero. Ab, consectetur iusto obcaecati officiis placeat sequi ullam veritatis? Aliquam, porro? Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
 </ul>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero. Ab, consectetur iusto obcaecati officiis placeat sequi ullam veritatis? Aliquam, porro? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero.</p>
-<ol start="2">
+<ol class="list" start="2">
 	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero.</li>
 	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero.</li>
 	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -88,75 +94,70 @@
 	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero.</li>
 </ol>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero. Ab, consectetur iusto obcaecati officiis placeat sequi ullam veritatis? Aliquam, porro? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero.</p>
-<h2>List-reset</h2>
-<ul class="list-reset">
-	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero.</li>
-	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur culpa cumque dicta excepturi iusto sapiente sequi totam vero. Lorem ipsum dolor sit amet, consectetur</li>
-</ul>
 <div class="h2">Link classes</div><a class="lnk" href="#">link</a><br><a class="lnk-pseudo" href="#">lnk-pseudo</a>
 <div class="h2">Underline helpers</div><a class="dash" href="#">Dashed</a><br><a class="dot" href="#">Dotted</a>
 								<div>
 									<div class="h2">Buttons</div>
 									<div>
 										<div class="h3">тег &lt;button&gt;</div>
-																										<button class="btn btn-primary" type="button">Primary</button>
-																										<button class="btn btn-secondary" type="button">Secondary</button>
-																										<button class="btn btn-third" type="button">Third</button>
-																										<button class="btn btn-success" type="button">Success</button>
-																										<button class="btn btn-danger" type="button">Danger</button>
-																										<button class="btn btn-warning" type="button">Warning</button>
-																										<button class="btn btn-info" type="button">Info</button>
-																										<button class="btn btn-link" type="button">Link</button>
+										<button class="btn btn-primary" type="button">Primary</button>
+										<button class="btn btn-secondary" type="button">Secondary</button>
+										<button class="btn btn-third" type="button">Third</button>
+										<button class="btn btn-success" type="button">Success</button>
+										<button class="btn btn-danger" type="button">Danger</button>
+										<button class="btn btn-warning" type="button">Warning</button>
+										<button class="btn btn-info" type="button">Info</button>
+										<button class="btn btn-link" type="button">Link</button>
 									</div>
 									<div>
 										<div class="h3">тег &lt;button&gt; outline</div>
-																										<button class="btn btn-primary-outline" type="button">Primary</button>
-																										<button class="btn btn-secondary-outline" type="button">Secondary</button>
-																										<button class="btn btn-third-outline" type="button">Third</button>
-																										<button class="btn btn-success-outline" type="button">Success</button>
-																										<button class="btn btn-danger-outline" type="button">Danger</button>
-																										<button class="btn btn-warning-outline" type="button">Warning</button>
-																										<button class="btn btn-info-outline" type="button">Info</button>
+										<button class="btn btn-primary-outline" type="button">Primary</button>
+										<button class="btn btn-secondary-outline" type="button">Secondary</button>
+										<button class="btn btn-third-outline" type="button">Third</button>
+										<button class="btn btn-success-outline" type="button">Success</button>
+										<button class="btn btn-danger-outline" type="button">Danger</button>
+										<button class="btn btn-warning-outline" type="button">Warning</button>
+										<button class="btn btn-info-outline" type="button">Info</button>
 									</div>
 									<div>
 										<div class="h3">тег &lt;button&gt; disabled</div>
-																										<button class="btn btn-primary disabled" disabled type="button">Primary</button>
-																										<button class="btn btn-secondary disabled" disabled type="button">Secondary</button>
-																										<button class="btn btn-third disabled" disabled type="button">Third</button>
-																										<button class="btn btn-success disabled" disabled type="button">Success</button>
-																										<button class="btn btn-danger disabled" disabled type="button">Danger</button>
-																										<button class="btn btn-warning disabled" disabled type="button">Warning</button>
-																										<button class="btn btn-info disabled" disabled type="button">Info</button>
-																										<button class="btn btn-link disabled" disabled type="button">Link</button>
+										<button class="btn btn-primary disabled" disabled type="button">Primary</button>
+										<button class="btn btn-secondary disabled" disabled type="button">Secondary</button>
+										<button class="btn btn-third disabled" disabled type="button">Third</button>
+										<button class="btn btn-success disabled" disabled type="button">Success</button>
+										<button class="btn btn-danger disabled" disabled type="button">Danger</button>
+										<button class="btn btn-warning disabled" disabled type="button">Warning</button>
+										<button class="btn btn-info disabled" disabled type="button">Info</button>
+										<button class="btn btn-link disabled" disabled type="button">Link</button>
 									</div>
 									<div>
 										<div class="h3">тег &lt;a&gt;</div>
-																										<a class="btn btn-primary" href="#">Primary</a>
-																										<a class="btn btn-secondary" href="#">Secondary</a>
-																										<a class="btn btn-third" href="#">Third</a>
-																										<a class="btn btn-success" href="#">Success</a>
-																										<a class="btn btn-danger" href="#">Danger</a>
-																										<a class="btn btn-warning" href="#">Warning</a>
-																										<a class="btn btn-info" href="#">Info</a>
-																										<a class="btn btn-link" href="#">Link</a>
+										<a class="btn btn-primary" href="#">Primary</a>
+										<a class="btn btn-secondary" href="#">Secondary</a>
+										<a class="btn btn-third" href="#">Third</a>
+										<a class="btn btn-success" href="#">Success</a>
+										<a class="btn btn-danger" href="#">Danger</a>
+										<a class="btn btn-warning" href="#">Warning</a>
+										<a class="btn btn-info" href="#">Info</a>
+										<a class="btn btn-link" href="#">Link</a>
 									</div>
 									<div>
 										<div class="h3">тег &lt;input&gt;</div>
-																										<input class="btn btn-primary" type="submit" value="Primary">
-																										<input class="btn btn-secondary" type="submit" value="Secondary">
-																										<input class="btn btn-third" type="submit" value="Third">
-																										<input class="btn btn-success" type="submit" value="Success">
-																										<input class="btn btn-danger" type="submit" value="Danger">
-																										<input class="btn btn-warning" type="submit" value="Warning">
-																										<input class="btn btn-info" type="submit" value="Info">
-																										<input class="btn btn-link" type="submit" value="Link">
+										<input class="btn btn-primary" type="submit" value="Primary">
+										<input class="btn btn-secondary" type="submit" value="Secondary">
+										<input class="btn btn-third" type="submit" value="Third">
+										<input class="btn btn-success" type="submit" value="Success">
+										<input class="btn btn-danger" type="submit" value="Danger">
+										<input class="btn btn-warning" type="submit" value="Warning">
+										<input class="btn btn-info" type="submit" value="Info">
+										<input class="btn btn-link" type="submit" value="Link">
 									</div>
 									<div class="h2">Button sizes
 										<div>
-																											<button class="btn btn-primary btn-lg" type="button">Primary</button>
-																											<button class="btn btn-primary" type="button">Primary</button>
-																											<button class="btn btn-primary btn-sm" type="button">Primary</button>
-																											<button class="btn btn-primary btn-xs" type="button">Primary</button>
+											<button class="btn btn-primary btn-lg" type="button">Primary</button>
+											<button class="btn btn-primary" type="button">Primary</button>
+											<button class="btn btn-primary btn-sm" type="button">Primary</button>
+											<button class="btn btn-primary btn-xs" type="button">Primary</button>
 										</div>
 									</div>
 								</div>
@@ -297,6 +298,119 @@
 		</tbody>
 	</table>
 </div>
+								<h2>Forms</h2>
+								<form class="form js-form" method="post" action="/">
+									<div class="form__inner form-row">
+										<div class="form__col col-md-6">
+											<div class="form__item control-group">
+												<label class="form__label" for="form_NAME">Name</label>
+												<div class="form__input">
+																					<input class="form-control" id="form_NAME" name="form_NAME" type="text" required data-valid_message="Fill this field">
+													<div class="form__validation"></div>
+												</div>
+											</div>
+										</div>
+										<div class="form__col col-md-6">
+											<div class="form__item control-group">
+												<label class="form__label" for="form_EMAIL">Email</label>
+												<div class="form__input">
+																					<input class="form-control" id="form_EMAIL" name="form_EMAIL" type="email" placeholder="Enter email" required>
+													<div class="form__validation"></div>
+												</div>
+											</div>
+										</div>
+										<div class="form__col col-12 col-md-4">
+											<div class="form__item control-group">
+												<label class="form__label" for="form_CITIES">Select</label>
+												<div class="form__input">
+																					<select class="form-control select2" id="form_CITIES" name="form_CITIES" required>
+																						<option selected="selected">Option selected</option>
+																						<option>Option 1 optionoption optionoptionoption 1</option>
+																						<option>Option 2</option>
+																						<option>Option 3</option>
+																						<option>Option 4 Option</option>
+																					</select>
+													<div class="form__validation"></div>
+												</div>
+											</div>
+										</div>
+										<div class="form__col col-12 col-md-4">
+											<div class="form__item control-group">
+												<label class="form__label" for="form_CITIES-2">Select with placeholder</label>
+												<div class="form__input">
+																					<select class="form-control select2" id="form_CITIES-2" name="form_CITIES-2" data-placeholder="Choose option" required>
+																						<option></option>
+																						<option>Option 1</option>
+																						<option disabled="true">Option 2</option>
+																						<option>Option 3 Option</option>
+																					</select>
+													<div class="form__validation"></div>
+												</div>
+											</div>
+										</div>
+										<div class="form__col col-12 col-md-4">
+											<div class="form__item control-group">
+												<label class="form__label" for="form_CITIES-3">Select with placeholder</label>
+												<div class="form__input">
+																					<select class="form-control select2" id="form_CITIES-3" name="form_CITIES-3" multiple="multiple" required>
+																						<option selected="selected">Option selected</option>
+																						<option>Option 1 optionoption optionoptionoption 1</option>
+																						<option>Option 2</option>
+																						<option>Option 3</option>
+																						<option>Option 4 Option</option>
+																					</select>
+													<div class="form__validation"></div>
+												</div>
+											</div>
+										</div>
+										<div class="form__col col-12">
+											<div class="form__item control-group">
+												<label class="form__label" for="form_MESSAGE">Your message</label>
+												<div class="form__input">
+																					<textarea class="form-control" id="form_MESSAGE" name="form_MESSAGE" required></textarea>
+													<div class="form__validation"></div>
+												</div>
+											</div>
+										</div>
+										<div class="form__col col-12">
+											<div class="form__item control-group">
+												<div class="form__input">
+																					<div class="checkboxradio checkbox">
+																						<input class="checkboxradio__input" type="checkbox" id="form_CONFIRMATION" name="form_CONFIRMATION" required>
+																						<label class="checkboxradio__label" for="form_CONFIRMATION">
+																							<div class="checkboxradio__box"></div><span class="checkboxradio__text">Confirm your age is more then 18</span>
+																						</label>
+																					</div>
+													<div class="form__validation"></div>
+												</div>
+											</div>
+										</div>
+										<div class="form__col col-12">
+											<div class="form__item control-group">
+												<label class="form__label" for="form_MALE">Select your male</label>
+												<div class="form__input">
+																					<div class="checkboxradio radio">
+																						<input class="checkboxradio__input" type="radio" id="form_MALE" name="form_MALE" required>
+																						<label class="checkboxradio__label" for="form_MALE">
+																							<div class="checkboxradio__box"></div><span class="checkboxradio__text">Male</span>
+																						</label>
+																					</div>
+																					<div class="checkboxradio radio">
+																						<input class="checkboxradio__input" type="radio" id="form_MALE-2" name="form_MALE" required>
+																						<label class="checkboxradio__label" for="form_MALE-2">
+																							<div class="checkboxradio__box"></div><span class="checkboxradio__text">Female</span>
+																						</label>
+																					</div>
+													<div class="form__validation"></div>
+												</div>
+											</div>
+										</div>
+										<div class="form__col col-12">
+																											<input class="btn btn-primary" type="submit" value="Submit">
+										</div>
+									</div>
+								</form>
+<div class="h2">Images with lazy loading</div><img class="lazy" data-src="./images/lazyloadImage.jpg" alt="alt"><img class="lazy" data-src="./images/lazyloadImage.jpg" alt="alt"><img class="lazy" data-src="./images/lazyloadImage.jpg" alt="alt">
 							</main>
 						</div>
 					</div>
@@ -320,5 +434,5 @@
 			<!--include ../../components/extra/scroll-to-top/index-->
 			<!--include ../../components/modals/quest-modal/index-->
 		</div>
-	<script type="text/javascript" src="./js/vendor.0fe0a6de4879397c22ab.js"></script><script type="text/javascript" src="./js/app.0fe0a6de4879397c22ab.js"></script></body>
+	<script type="text/javascript" src="./js/vendor.js"></script><script type="text/javascript" src="./js/app.js"></script></body>
 </html>
