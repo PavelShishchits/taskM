@@ -3,6 +3,8 @@ const path = require('path');
 const merge = require('webpack-merge');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WriteFilePlugin = require('write-file-webpack-plugin');
 
 // modules
 const sass = require('./webpack/sass');
@@ -56,6 +58,23 @@ const commonConfig = (argv) => {
           $: 'jquery',
           jQuery: 'jquery'
         }),
+        new WriteFilePlugin({
+          writeToDisk: true
+        }),
+        new CopyWebpackPlugin ([ //copy all images
+          {
+            from: { glob: './src/components/**/img/*.*'},
+            to: './images',
+            flatten: true
+          },
+        ]),
+        new CopyWebpackPlugin ([ //copy all svg icons included in scss files
+          {
+            from: { glob: './src/components/**/svgCss/*.*'},
+            to: '../src/images/svgCss',
+            flatten: true
+          },
+        ])
       ]
     },
     pug(),

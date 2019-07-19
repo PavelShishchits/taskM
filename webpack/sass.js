@@ -33,7 +33,7 @@ module.exports = (argv) => {
                                 ident: 'postcss',
                                 plugins: [
                                     inlinesvg({
-                                        paths: [path.resolve('./src/components/')]
+                                        paths: [path.resolve('./src/images/svgCss')]
                                     }),
                                     postcsssvgo(),
                                     mqpacker({

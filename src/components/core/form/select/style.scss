@@ -54,7 +54,7 @@
         transform: translate(-50%, -50%);
         width: 13px;
         height: 8px;
-        background-image: svg-load('core/form/select/svgCss/select-arrow.svg', stroke=$brand-gray-9);
+        background-image: svg-load('select-arrow.svg', stroke=$brand-gray-9);
       }
     }
   }
@@ -176,7 +176,7 @@
 
       .select2-selection__arrow {
         b {
-          background-image: svg-load('core/form/select/svgCss/select-arrow.svg', stroke=$link-color);
+          background-image: svg-load('select-arrow.svg', stroke=$link-color);
         }
       }
     }

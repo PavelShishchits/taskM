@@ -1,6 +1,3 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WriteFilePlugin = require('write-file-webpack-plugin');
-
 module.exports = (argv) => {
     const {mode} = argv;
     const isProduction = mode === 'production';
@@ -21,19 +18,7 @@ module.exports = (argv) => {
                     ]
                 }
             ]
-        },
-        plugins: [
-            new WriteFilePlugin({
-                writeToDisk: true
-            }),
-            new CopyWebpackPlugin ([
-                {
-                    from: { glob: './src/components/**/img/*.*'},
-                    to: './images',
-                    flatten: true
-                },
-            ])
-        ],
+        }
     };
 
     if (isProduction) {

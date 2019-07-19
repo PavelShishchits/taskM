@@ -5,8 +5,8 @@ Don't inline images use path to image: img(src='./images/tabs_01.jpg' alt='alt')
 ## Icons
 1) inline svg as background image  
 dir - svgCss/icon.svg  
-usage - background-image: svg-load('core/tabs/svgCss/close.svg', fill=#000, stroke=#e5e5e5);  
-path to url will be always relative from COMPONENTS directory
+usage - background-image: svg-load('close.svg', fill=#000, stroke=#e5e5e5);  
+Icons are copied in images/svgCss dir which is watched by Postcss-inlinesvg plugin
 
 2) inline svg as inline svg sprite  
 dir - svg/icon.svg || ./images/svgIcons/*.svg (for icons which couldn't be included in js component)  
