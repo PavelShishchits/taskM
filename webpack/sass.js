@@ -1,4 +1,5 @@
-const path = require('path');
+const {resolve, join} = require('path');
+const OPT = require('./config');
 const sass = require('sass');
 const autoprefixer = require('autoprefixer');
 const mqpacker = require('css-mqpacker');
@@ -33,7 +34,7 @@ module.exports = (argv) => {
                                 ident: 'postcss',
                                 plugins: [
                                     inlinesvg({
-                                        paths: [path.resolve('./src/images/svgCss')]
+                                        paths: [resolve(join(OPT.images, 'svgCss'))]
                                     }),
                                     postcsssvgo(),
                                     mqpacker({
@@ -56,7 +57,7 @@ module.exports = (argv) => {
         },
         plugins: [
             new StyleLintPlugin({
-                configFile:  path.resolve('./.stylelintrc'),
+                configFile:  resolve(OPT.stylelint),
             }),
         ]
     };

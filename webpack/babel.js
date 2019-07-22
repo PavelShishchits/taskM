@@ -1,4 +1,5 @@
 const {resolve} = require('path');
+const OPT = require('./config');
 
 module.exports = () => {
     return {
@@ -26,7 +27,7 @@ module.exports = () => {
                         {
                             loader: "eslint-loader",
                             options: {
-                                configFile: resolve('./.eslintrc.js')
+                                configFile: resolve(OPT.eslint)
                             }
                         }
                     ]

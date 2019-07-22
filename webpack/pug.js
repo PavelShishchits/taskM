@@ -1,8 +1,9 @@
-const path = require('path');
+const {resolve, basename, join} = require('path');
 const glob = require('glob');
+const OPT = require('./config');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-let pages = glob.sync(path.resolve('./src/pug/pages/*pug'));
+let pages = glob.sync(resolve(join(OPT.pug, 'pages', '*.pug')));
 
 module.exports = () => {
     return {
@@ -18,10 +19,10 @@ module.exports = () => {
             ],
         },
         plugins: pages.map((file) => {
-            let base = path.basename(file, '.pug');
+            let base = basename(file, '.pug');
             return new HtmlWebpackPlugin({
                 filename: base + '.html',
-                template: path.resolve('./src/pug/pages/' + base + '.pug')
+                template: resolve(join(OPT.pug, 'pages', base + '.pug'))
             })
         })
     };

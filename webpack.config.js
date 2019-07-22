@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const path = require('path');
+const {join} = require('path');
 const merge = require('webpack-merge');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
@@ -7,6 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
 // modules
+const OPT = require('./webpack/config');
 const sass = require('./webpack/sass');
 const pug = require('./webpack/pug');
 const favicon = require('./webpack/favicon');
@@ -17,17 +18,12 @@ const devserver = require('./webpack/devserver');
 const svgSprite = require('./webpack/svgSprite');
 const pngSprite = require('./webpack/pngSprite');
 
-const PATHS = {
-  src: path.join(__dirname, 'src'),
-  dist: path.join(__dirname, 'dist'),
-};
-
 const commonConfig = (argv) => {
   const {mode} = argv;
   return merge([
     {
       entry: {
-        app: path.join(PATHS.src, 'index.js')
+        app: join(__dirname, OPT.src, 'index.js')
       },
       optimization: {
         splitChunks: {
@@ -48,7 +44,7 @@ const commonConfig = (argv) => {
       },
       output: {
         filename: mode === 'production' ? './js/[name].[hash].js' : './js/[name].js',
-        path: PATHS.dist
+        path: join(__dirname, OPT.dist)
       },
       resolve: {
         modules: ['node_modules', 'images']
@@ -118,7 +114,6 @@ module.exports = ((env, argv) => {
 // toDo find good stylelint config (3)
 // toDo make async font loading (4)
 // toDo fill tables with english content (4)
-// toDo create config json file with paths (2)
 
 // forms
 // toDo datepicker (4)

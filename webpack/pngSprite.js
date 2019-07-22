@@ -1,19 +1,20 @@
-const path = require('path');
+const {resolve, join} = require('path');
 const SpritesmithPlugin = require('webpack-spritesmith');
+const OPT = require('./config');
 
 module.exports = () => {
     return {
         plugins: [
             new SpritesmithPlugin({
                 src: {
-                    cwd: path.resolve('./src/images/pngIcons/'),
+                    cwd: resolve(join(OPT.images, 'pngIcons/')),
                     glob: '*.png'
                 },
                 target: {
-                    image: path.resolve('./src/images/sprite.png'),
+                    image: resolve(join(OPT.images, 'sprite.png')),
                     css: [
-                        [path.resolve('./src/scss/utils/png/_mixin.scss'), {format: 'mixin'}],
-                        [path.resolve('./src/scss/utils/png/_icons.scss'), {format: 'icons'}]
+                        [resolve(join(OPT.scss, 'utils', 'png', '_mixin.scss')), {format: 'mixin'}],
+                        [resolve(join(OPT.scss, 'utils', 'png', '_icons.scss')), {format: 'icons'}]
                     ]
                 },
                 apiOptions: {
@@ -23,8 +24,8 @@ module.exports = () => {
                     padding: 2,
                 },
                 customTemplates: {
-                    mixin: path.resolve('./src/scss/utils/png/mixin.handlebars'),
-                    icons: path.resolve('./src/scss/utils/png/icons.handlebars')
+                    mixin: resolve(join(OPT.scss, 'utils', 'png', 'mixin.handlebars')),
+                    icons: resolve(join(OPT.scss, 'utils', 'png', 'icons.handlebars'))
                 }
             })
         ]

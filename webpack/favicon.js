@@ -1,4 +1,5 @@
-const path = require('path');
+const {resolve, join} = require('path');
+const OPT = require('./config');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = () => {
@@ -6,7 +7,7 @@ module.exports = () => {
         plugins: [
             new FaviconsWebpackPlugin({
                 // Your source logo
-                logo: path.resolve('./src/images/favicon/favicon.png'),
+                logo: resolve(join(OPT.images, 'favicon', 'favicon.png')),
                 // The prefix for all image files (might be a folder or a name)
                 prefix: 'favicons/',
                 // Emit all stats of the generated icons
