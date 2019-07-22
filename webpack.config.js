@@ -11,7 +11,7 @@ const OPT = require('./webpack/config');
 const sass = require('./webpack/sass');
 const pug = require('./webpack/pug');
 const favicon = require('./webpack/favicon');
-const fonts = require('./webpack/fonts');
+// const fonts = require('./webpack/fonts');
 const images = require('./webpack/images');
 const babel = require('./webpack/babel');
 const devserver = require('./webpack/devserver');
@@ -70,11 +70,17 @@ const commonConfig = (argv) => {
             to: '../src/images/svgCss',
             flatten: true
           },
+        ]),
+        new CopyWebpackPlugin ([
+          {
+            from: OPT.fonts,
+            to: './fonts'
+          },
         ])
       ]
     },
     pug(),
-    fonts(),
+    // fonts(),
     images(argv),
     babel(),
     sass(argv),

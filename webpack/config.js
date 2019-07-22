@@ -6,4 +6,5 @@ module.exports = {
     images: './src/images',
     scss: './src/scss',
     pug: './src/pug',
+    fonts: './src/fonts'
 };

@@ -43,6 +43,8 @@ h6,
 .h5,
 .h6 {
   font-family: $headings-font-family;
+  //font-family: Roboto-Bold, Helvetica, Arial, sans-serif;
+  //font-family: 'Roboto-Bold','sans-serif';
   color: $headings-color;
   word-wrap: break-word;
   @include skip-font-styles;
