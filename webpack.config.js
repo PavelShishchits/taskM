@@ -109,7 +109,6 @@ module.exports = ((env, argv) => {
 
 // todos
 // toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes) (2) (svgo don't remove with and height)
-// toDo detectors (isIe, js-on) (2)
 // toDo open webpack analyzer by separate command (2)
 // toDo find good stylelint config (3)
 // toDo make async font loading (4)

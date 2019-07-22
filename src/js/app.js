@@ -1,8 +1,8 @@
 import './components';
 import './modules/icons';
-import {psUtils} from './modules/utils';
+import * as utils from './modules/utils';
 import {bp} from './modules/variables';
-console.log(bp, psUtils);
+console.log(bp, utils.currentDevice);
 
 
 // const a = new Promise((resolve, reject) => {
@@ -12,3 +12,8 @@ console.log(bp, psUtils);
 // a.then(() => {
 //     console.log('mew');
 // });
+
+$(function () {
+    utils.detectJs();
+    utils.detectIE();
+});
