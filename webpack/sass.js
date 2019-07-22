@@ -21,12 +21,12 @@ module.exports = (argv) => {
                 {
                     test: /\.scss$/,
                     use: [
-                        isProduction ? {
+                        {
                             loader: MiniCssExtractPlugin.loader,
                             options: {
                                 publicPath: '../'
                             }
-                        } : 'style-loader',
+                        },
                         'css-loader',
                         {
                             loader: 'postcss-loader',
@@ -59,18 +59,16 @@ module.exports = (argv) => {
             new StyleLintPlugin({
                 configFile:  resolve(OPT.stylelint),
             }),
+            new MiniCssExtractPlugin({
+                filename: 'css/[name].min.css',
+                chunkFilename: 'css/[id].css',
+            })
         ]
     };
     if (isProduction) {
         config.optimization = {
             minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})]
         };
-        config.plugins = [
-            new MiniCssExtractPlugin({
-                filename: 'css/[name].[hash].css',
-                chunkFilename: 'css/[id].[hash].css',
-            })
-        ];
     }
     return config;
 };

@@ -43,7 +43,7 @@ const commonConfig = (argv) => {
         }
       },
       output: {
-        filename: mode === 'production' ? './js/[name].[hash].js' : './js/[name].js',
+        filename: mode === 'production' ? './js/[name].min.js' : './js/[name].js',
         path: join(__dirname, OPT.dist)
       },
       resolve: {
@@ -112,7 +112,6 @@ module.exports = ((env, argv) => {
 // toDo open webpack analyzer by separate command (2)
 // toDo find good stylelint config (3)
 // toDo make async font loading (4)
-// toDo fill tables with english content (4)
 
 // forms
 // toDo datepicker (4)
