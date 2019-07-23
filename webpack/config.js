@@ -5,6 +5,5 @@ module.exports = {
     stylelint: '.stylelintrc',
     images: './src/images',
     scss: './src/scss',
-    pug: './src/pug',
-    fonts: './src/fonts'
+    pug: './src/pug'
 };

@@ -42,5 +42,5 @@ $(function () {
             });
     };
 
-    // getData('http://localhost:4000/products');
+    getData('http://localhost:4000/products');
 });

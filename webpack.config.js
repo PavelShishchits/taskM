@@ -11,7 +11,7 @@ const OPT = require('./webpack/config');
 const sass = require('./webpack/sass');
 const pug = require('./webpack/pug');
 const favicon = require('./webpack/favicon');
-// const fonts = require('./webpack/fonts');
+const fonts = require('./webpack/fonts');
 const images = require('./webpack/images');
 const babel = require('./webpack/babel');
 const devserver = require('./webpack/devserver');
@@ -70,17 +70,11 @@ const commonConfig = (argv) => {
             to: '../src/images/svgCss',
             flatten: true
           },
-        ]),
-        new CopyWebpackPlugin ([
-          {
-            from: OPT.fonts,
-            to: './fonts'
-          },
         ])
       ]
     },
     pug(),
-    // fonts(),
+    fonts(),
     images(argv),
     babel(),
     sass(argv),
@@ -114,10 +108,9 @@ module.exports = ((env, argv) => {
 });
 
 // todos
-// toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes) (2) (svgo don't remove with and height)
+// toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes) (2) (svgo don't remove width and height)
 // toDo open webpack analyzer by separate command (2)
 // toDo find good stylelint config (3)
-// toDo make async font loading (4)
 
 // forms
 // toDo datepicker (4)
