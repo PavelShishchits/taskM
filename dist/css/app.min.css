@@ -25,6 +25,27 @@
 .test-component__icon:hover {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='21' height='21' xmlns='http://www.w3.org/2000/svg' stroke='%23e5e5'%3E%3Cg stroke-width='3'%3E%3Cpath d='M2 19L19 2M19 19L2 2'/%3E%3C/g%3E%3C/svg%3E");
 }
+.fade {
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade:not(.show) {
+  opacity: 0;
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
 
 @charset "UTF-8";
 @font-face {

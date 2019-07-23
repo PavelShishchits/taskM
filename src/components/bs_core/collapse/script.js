@@ -7,7 +7,7 @@
 
 import $ from 'jquery';
 import Util from '../utils/script';
-import 'style.scss';
+import './style.scss';
 
 /**
  * ------------------------------------------------------------------------

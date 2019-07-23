@@ -27,7 +27,8 @@ module.exports = () => {
                         {
                             loader: "eslint-loader",
                             options: {
-                                configFile: resolve(OPT.eslint)
+                                configFile: resolve(OPT.eslint),
+                                ignorePattern: resolve(OPT.eslintignore)
                             }
                         }
                     ]
