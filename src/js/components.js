@@ -5,3 +5,6 @@ import '../components/utils/lazyLoadImages/script';
 
 //test component
 import '../components/pages/index/testComponent/script';
+
+// bs_components
+import '../components/bs_core/collapse/script';
