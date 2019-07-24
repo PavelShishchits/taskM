@@ -14,6 +14,10 @@ $transition-collapse:         height .35s ease;
   &:not(.show) {
     display: none;
   }
+
+  > * {
+    margin: 0;
+  }
 }
 
 .collapsing {

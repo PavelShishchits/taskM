@@ -1,0 +1,15 @@
+- var title = ['Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet', 'Lorem ipsum', 'Lorem ipsum dolor sit amet', 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet'];
+- var n = 0
+.h2
+  | Accordion
+.accordion#accordion-01
+  .acc-group
+    while n < 5
+      - n++
+      .panel
+        .acc-heading
+          a.link.svg-arrow(href='#', data-toggle='collapse', data-target='#accordion-' + n + '', class=n !== 4 ? 'collapsed' : '')
+            span.dash #{title[n - 1]}
+        .collapse(id='accordion-' + n + '', class=n === 4 ? 'show' : '', data-parent='#accordion-01')
+          .acc-body
+            include ../../utils/lorem/index

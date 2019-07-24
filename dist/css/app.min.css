@@ -37,6 +37,9 @@
 .collapse:not(.show) {
   display: none;
 }
+.collapse > * {
+  margin: 0;
+}
 
 .collapsing {
   position: relative;
@@ -2139,6 +2142,50 @@ progress {
 .form-row > [class*=col-] {
   padding-right: 5px;
   padding-left: 5px;
+}
+
+.accordion {
+  margin: 0 0 40px;
+}
+.accordion .panel {
+  padding-left: 26px;
+}
+.accordion .panel .link {
+  font-size: 1.8rem;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+.accordion .panel .link:before {
+  font-size: 7px;
+  position: absolute;
+  top: 8px;
+  left: -24px;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.accordion .panel .link:hover, .accordion .panel .link:focus {
+  color: #074396;
+}
+.accordion .panel .collapsed {
+  color: #3a71c0;
+}
+.accordion .panel .collapsed:before {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.accordion .acc-heading {
+  padding: 0 0 13px;
+}
+.accordion .acc-body {
+  padding-bottom: 27px;
 }
 @media (max-width: 1219.98px) {
   .table-wrap table td,
