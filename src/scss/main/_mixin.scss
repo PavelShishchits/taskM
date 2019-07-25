@@ -78,3 +78,17 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
+@mixin svg() {
+  content: '';
+  display: inline-block;
+  transition: $transition-default;
+}
+
+@mixin svg-load($name: '', $width: '', $height: '', $fill: '', $stroke: '') {
+  background: svg-load($name, fill=$fill, stroke=$stroke) no-repeat;
+  background-size: cover;
+  width: $width;
+  height: $height;
+}

@@ -8,7 +8,7 @@
       - n++
       .panel
         .acc-heading
-          a.link.svg-arrow(href='#', data-toggle='collapse', data-target='#accordion-' + n + '', class=n !== 4 ? 'collapsed' : '')
+          a.link(href='#', data-toggle='collapse', data-target='#accordion-' + n + '', class=n !== 4 ? 'collapsed' : '')
             span.dash #{title[n - 1]}
         .collapse(id='accordion-' + n + '', class=n === 4 ? 'show' : '', data-parent='#accordion-01')
           .acc-body

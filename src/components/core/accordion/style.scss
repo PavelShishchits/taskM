@@ -15,19 +15,19 @@ $_accordion-font-size:                1.8rem;
       display: inline-block;
 
       &:before {
-        font-size: 7px;
+        @include svg;
+        @include svg-load('collapse-arrow.svg', 10px, 9px, $link-color);
         position: absolute;
         top: $_accordion-top;
         left: -$_accordion-padding-left + 2px;
         transform: rotate(-180deg);
-        transition: transform .3s ease;
       }
       
       @include hover-focus {
         color: $link-color-hover;
 
         &:before {
-          //@include svg-arrow-hover();
+          @include svg-load('collapse-arrow.svg', 10px, 9px, $link-color-hover);
         }
       }
     }

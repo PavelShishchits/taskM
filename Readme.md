@@ -5,7 +5,9 @@ Don't inline images use path to image: img(src='./images/tabs_01.jpg' alt='alt')
 ## Icons
 1) inline svg as background image  
 dir - svgCss/icon.svg  
-usage - background-image: svg-load('close.svg', fill=#000, stroke=#e5e5e5);  
+usage -   
+@include svg;  
+@include svg-load('collapse-arrow.svg', 10px, 9px, $link-color);  
 Icons are copied in images/svgCss dir which is watched by Postcss-inlinesvg plugin
 
 2) inline svg as inline svg sprite  
