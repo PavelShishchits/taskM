@@ -1,0 +1,17 @@
+.h2 Modal
++btn-primary({type: 'button', text: 'Launch demo modal'})(data-toggle='modal', data-target='#myModal')
+#myModal.modal.fade(tabindex='-1', role='dialog')
+  .modal-dialog
+    .modal-content
+      .modal-header
+        .h2.modal-title Modal title
+        button.close(type='button', data-dismiss='modal', aria-label="Close")
+      .modal-body
+        .h3
+          | Lorem Lorem
+        include ../../utils/lorem/index
+        include ../../utils/lorem/index
+        include ../../utils/lorem/index
+      .modal-footer
+        +btn-primary({type: 'button', text: 'Close'})(data-dismiss='modal')
+        +btn-primary({type: 'button', text: 'Save changes'})

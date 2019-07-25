@@ -1,0 +1,44 @@
+.h2 Tabs with accordion
+.tabs-accordion.tabs
+  ul.nav.nav-tabs.list-reset(role="tablist")
+    li.nav-item
+      a.nav-link.active(href='#tab-01', data-toggle='tab')
+        span Description
+    li.nav-item
+      a.nav-link(href='#tab-02', data-toggle='tab')
+        span Profile
+    li.nav-item
+      a.nav-link(href='#tab-03', data-toggle='tab')
+        span Messages
+    li.nav-item
+      a.nav-link(href='#tab-04', data-toggle='tab')
+        span Definition
+  #tabs-accordion.tab-content
+    #tab-01.tab-pane.panel.fade.in.active.show(role='tabpanel')
+      .acc-heading
+        a.nav-link.acc-link(href='#', data-toggle='collapse', data-target='#tab-accordion-01') Description
+      #tab-accordion-01.collapse.show(data-parent='#tabs-accordion')
+        .acc-body
+          .h4 Description
+          include ../../utils/lorem/index
+    #tab-02.tab-pane.panel.fade(role='tabpanel')
+      .acc-heading
+        a.nav-link.acc-link.collapsed(href='#', data-toggle='collapse', data-target='#tab-accordion-02') Profile
+      #tab-accordion-02.collapse(data-parent='#tabs-accordion')
+        .acc-body
+          .h4 Profile
+          include ../../utils/lorem/index
+    #tab-03.tab-pane.panel.fade(role='tabpanel')
+      .acc-heading
+        a.nav-link.acc-link.collapsed(href='#', data-toggle='collapse', data-target='#tab-accordion-03') Messages
+      #tab-accordion-03.collapse(data-parent='#tabs-accordion')
+        .acc-body
+          .h4 Messages
+          include ../../utils/lorem/index
+    #tab-04.tab-pane.panel.fade(role='tabpanel')
+      .acc-heading
+        a.nav-link.acc-link.collapsed(href='#', data-toggle='collapse', data-target='#tab-accordion-04') Definition
+      #tab-accordion-04.collapse(data-parent='#tabs-accordion')
+        .acc-body
+          .h4 Definition
+          include ../../utils/lorem/index

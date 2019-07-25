@@ -108,7 +108,6 @@ module.exports = ((env, argv) => {
 });
 
 // todos
-// toDo svg icon generator (investigate if it is possible to generate css file with icons viewboxes) (2) (svgo don't remove width and height)
 // toDo open webpack analyzer by separate command (2)
 
 // forms
@@ -116,4 +115,5 @@ module.exports = ((env, argv) => {
 // toDo input[file] (4)
 // toDo input[number] (ui-spinner) (4)
 
-// bootstrap modules (tabs,
+// bootstrap modules
+// toDo add tabs-menu

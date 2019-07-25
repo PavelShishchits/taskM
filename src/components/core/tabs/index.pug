@@ -1,0 +1,28 @@
+.h2 Tabs
+.tabs
+  ul.nav.nav-tabs.list-reset(role="tablist")
+    li.nav-item
+      a.nav-link.active(href='#tab-1', data-toggle='tab')
+        span Description
+    li.nav-item
+      a.nav-link(href='#tab-2', data-toggle='tab')
+        span Profile
+    li.nav-item
+      a.nav-link(href='#tab-3', data-toggle='tab')
+        span Messages
+    li.nav-item
+      a.nav-link(href='#tab-4', data-toggle='tab')
+        span Definition
+  .tab-content
+    #tab-1.tab-pane.fade.in.active.show(role='tabpanel')
+      .h4 Description
+      include ../../utils/lorem/index
+    #tab-2.tab-pane.fade(role='tabpanel')
+      .h4 Profile
+      include ../../utils/lorem/index
+    #tab-3.tab-pane.fade(role='tabpanel')
+      .h4 Messages
+      include ../../utils/lorem/index
+    #tab-4.tab-pane.fade(role='tabpanel')
+      .h4 Definition
+      include ../../utils/lorem/index

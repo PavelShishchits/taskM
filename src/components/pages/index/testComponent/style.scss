@@ -17,13 +17,13 @@
 
     &:before {
       @include svg;
-      @include svg-load('close.svg', 30px, 30px, '', #000);
+      @include svg-load('test-icon.svg', 30px, 30px, '', #000);
     }
 
     &:hover {
 
       &:before {
-        @include svg-load('close.svg', 30px, 30px, '', #e5e5);
+        @include svg-load('test-icon.svg', 30px, 30px, '', #e5e5);
       }
     }
   }
