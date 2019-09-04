@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const {join} = require('path');
 const merge = require('webpack-merge');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
@@ -90,8 +89,7 @@ module.exports = ((env, argv) => {
     return merge([
       {
         plugins: [
-          new CleanWebpackPlugin(),
-          // new BundleAnalyzerPlugin()
+          new CleanWebpackPlugin()
         ]
       },
       commonConfig(argv),
