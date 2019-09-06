@@ -10,6 +10,7 @@ class TestCompontent extends Component {
         this._data = $.extend({}, {
             products
         });
+        console.log('mew 2');
     }
 
     get template() {

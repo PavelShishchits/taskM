@@ -60,7 +60,7 @@ module.exports = (argv) => {
                 configFile: resolve(OPT.stylelint),
             }),
             new MiniCssExtractPlugin({
-                filename: 'css/[name].min.css',
+                filename: 'css/[name].css',
                 chunkFilename: 'css/[id].css',
             })
         ]
